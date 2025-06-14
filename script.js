@@ -1,4 +1,23 @@
-// Smooth scrolling for navigation links
+// Animation au scroll
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, observerOptions);
+
+// Observer tous les éléments avec la classe fade-in
+document.querySelectorAll('.fade-in').forEach(el => {
+    observer.observe(el);
+});
+
+// Smooth scroll pour les liens de navigation
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -12,115 +31,27 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Navbar scroll effect
-window.addEventListener('scroll', function() {
-    const navbar = document.getElementById('navbar');
-    if (window.scrollY > 100) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
+// Animation additionnelle pour les cartes de projets
+document.addEventListener('DOMContentLoaded', function() {
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    projectCards.forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.1}s`;
+        card.classList.add('card-animation');
+    });
+});
+
+// Effet parallaxe simple sur le hero
+window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    const hero = document.querySelector('.hero');
+    if (hero) {
+        hero.style.transform = `translateY(${scrolled * 0.5}px)`;
     }
 });
 
-// Fade in animation on scroll
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver(function(entries) {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-        }
-    });
-}, observerOptions);
-
-document.querySelectorAll('.fade-in').forEach(el => {
-    observer.observe(el);
-});
-
-// Particle animation
-function createParticle() {
-    const particle = document.createElement('div');
-    particle.className = 'particle';
-    particle.style.left = Math.random() * 100 + '%';
-    particle.style.width = particle.style.height = Math.random() * 4 + 2 + 'px';
-    particle.style.animationDuration = Math.random() * 3 + 3 + 's';
-    particle.style.animationDelay = Math.random() * 2 + 's';
-    
-    document.getElementById('particles').appendChild(particle);
-    
-    setTimeout(() => {
-        particle.remove();
-    }, 6000);
-}
-
-// Create particles periodically
-setInterval(createParticle, 300);
-
-// Form submission
-document.querySelector('.contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Animation du bouton
-    const button = this.querySelector('button');
-    const originalText = button.textContent;
-    button.textContent = 'Message envoyé! ✓';
-    button.style.background = 'linear-gradient(135deg, #00ff00, #00aa00)';
-    
-    setTimeout(() => {
-        button.textContent = originalText;
-        button.style.background = '';
-        this.reset();
-    }, 3000);
-});
-
-// Add dynamic hover effects to project cards
-document.querySelectorAll('.project-card').forEach(card => {
-    card.addEventListener('mousemove', function(e) {
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-        
-        const rotateX = (y - centerY) / 10;
-        const rotateY = (centerX - x) / 10;
-        
-        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
-    });
-    
-    card.addEventListener('mouseleave', function() {
-        card.style.transform = '';
-    });
-});
-
-// Typing effect for hero title
-function typeWriter(element, text, speed = 100) {
-    let i = 0;
-    element.innerHTML = '';
-    function type() {
-        if (i < text.length) {
-            element.innerHTML += text.charAt(i);
-            i++;
-            setTimeout(type, speed);
-        }
-    }
-    type();
-}
-
-// Initialize typing effect when page loads
-window.addEventListener('load', function() {
-    const heroTitle = document.querySelector('.hero h1');
-    setTimeout(() => {
-        typeWriter(heroTitle, 'Développeur Web', 150);
-    }, 1000);
-});
-
-// Add active navigation link highlighting
-window.addEventListener('scroll', function() {
+// Navigation active selon la section
+window.addEventListener('scroll', () => {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-links a');
     
@@ -128,127 +59,125 @@ window.addEventListener('scroll', function() {
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
-        if (window.scrollY >= (sectionTop - 200)) {
+        if (scrollY >= (sectionTop - 200)) {
             current = section.getAttribute('id');
         }
     });
 
     navLinks.forEach(link => {
         link.classList.remove('active');
-        if (link.getAttribute('href') === '#' + current) {
+        if (link.getAttribute('href') === `#${current}`) {
             link.classList.add('active');
         }
     });
 });
 
-// Smooth reveal animation for cards
-function revealCards() {
-    const cards = document.querySelectorAll('.project-card');
-    cards.forEach((card, index) => {
-        card.style.animationDelay = `${index * 0.1}s`;
-        card.classList.add('reveal-card');
-    });
-}
-
-// Call reveal function when projects section is visible
-const projectsObserver = new IntersectionObserver(function(entries) {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            revealCards();
-            projectsObserver.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.3 });
-
-const projectsSection = document.getElementById('projects');
-if (projectsSection) {
-    projectsObserver.observe(projectsSection);
-}
-
-// Add smooth cursor following effect
-document.addEventListener('mousemove', function(e) {
-    const cursor = document.querySelector('.cursor');
-    if (!cursor) {
-        const newCursor = document.createElement('div');
-        newCursor.className = 'cursor';
-        newCursor.style.cssText = `
-            position: fixed;
-            width: 20px;
-            height: 20px;
-            background: radial-gradient(circle, var(--primary-color), var(--secondary-color));
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 9999;
-            mix-blend-mode: difference;
-            transition: transform 0.1s;
-        `;
-        document.body.appendChild(newCursor);
-    }
-    
-    const cursorElement = document.querySelector('.cursor');
-    cursorElement.style.left = e.clientX - 10 + 'px';
-    cursorElement.style.top = e.clientY - 10 + 'px';
-});
-
-// Enhanced form validation
-function validateForm() {
-    const form = document.querySelector('.contact-form');
-    const inputs = form.querySelectorAll('input, textarea');
-    
-    inputs.forEach(input => {
-        input.addEventListener('blur', function() {
-            if (this.value.trim() === '') {
-                this.style.borderColor = '#ff006e';
-            } else {
-                this.style.borderColor = '#00f5ff';
-            }
-        });
+// Fonctions pour les modales
+function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden'; // Empêche le scroll de la page
         
-        input.addEventListener('focus', function() {
-            this.style.borderColor = '#00f5ff';
-        });
-    });
+        // Animation d'entrée
+        const modalContent = modal.querySelector('.modal-content');
+        modalContent.style.transform = 'translateY(-50px) scale(0.9)';
+        modalContent.style.opacity = '0';
+        
+        setTimeout(() => {
+            modalContent.style.transition = 'all 0.3s ease-out';
+            modalContent.style.transform = 'translateY(0) scale(1)';
+            modalContent.style.opacity = '1';
+        }, 10);
+    }
 }
 
-// Initialize form validation
-document.addEventListener('DOMContentLoaded', validateForm);
-
-// Add loading animation
-window.addEventListener('load', function() {
-    document.body.classList.add('loaded');
-    
-    // Remove loading screen if exists
-    const loader = document.querySelector('.loader');
-    if (loader) {
-        loader.style.opacity = '0';
+function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        const modalContent = modal.querySelector('.modal-content');
+        
+        // Animation de sortie
+        modalContent.style.transition = 'all 0.3s ease-out';
+        modalContent.style.transform = 'translateY(-50px) scale(0.9)';
+        modalContent.style.opacity = '0';
+        
         setTimeout(() => {
-            loader.remove();
-        }, 500);
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Réactive le scroll de la page
+        }, 300);
+    }
+}
+
+// Fermer la modale en cliquant en dehors
+window.addEventListener('click', function(event) {
+    if (event.target.classList.contains('modal')) {
+        const modalId = event.target.getAttribute('id');
+        closeModal(modalId);
     }
 });
 
-// Performance optimization - Throttle scroll events
-function throttle(func, wait) {
-    let timeout;
-    return function executedFunction(...args) {
-        const later = () => {
-            clearTimeout(timeout);
-            func(...args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-    };
-}
-
-// Apply throttling to scroll events
-const throttledScroll = throttle(function() {
-    // Navbar scroll effect
-    const navbar = document.getElementById('navbar');
-    if (window.scrollY > 100) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
+// Fermer la modale avec la touche Échap
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        const openModal = document.querySelector('.modal[style*="block"]');
+        if (openModal) {
+            closeModal(openModal.getAttribute('id'));
+        }
     }
-}, 10);
+});
 
-window.addEventListener('scroll', throttledScroll);
+// Ajout de classe CSS pour le lien actif
+const style = document.createElement('style');
+style.textContent = `
+    .nav-links a.active {
+        color: #ffd700 !important;
+        font-weight: 600;
+    }
+    
+    .card-animation {
+        opacity: 0;
+        transform: translateY(30px);
+        animation: cardFadeIn 0.6s ease-out forwards;
+    }
+    
+    @keyframes cardFadeIn {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    /* Responsive pour les modales */
+    @media (max-width: 768px) {
+        .modal-content {
+            margin: 5% auto;
+            width: 98%;
+            max-height: 85vh;
+        }
+        
+        .modal-content h2 {
+            padding: 2rem;
+            font-size: 1.4rem;
+        }
+        
+        .modal-body {
+            padding: 2rem;
+        }
+        
+        .close {
+            top: 1rem;
+            right: 1.5rem;
+            font-size: 2rem;
+        }
+        
+        .project-info p {
+            font-size: 1rem;
+        }
+        
+        .project-info h3 {
+            font-size: 1.2rem;
+        }
+    }
+`;
+document.head.appendChild(style);

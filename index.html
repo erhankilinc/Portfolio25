@@ -3,421 +3,557 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mes Projets - Portfolio</title>
+    <title>Erhan Kilinc - Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="projets.css">
 </head>
 <body>
-    <!-- Particles Background -->
-    <div class="particles" id="particles"></div>
-
-    <!-- Navigation -->
-    <nav id="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <a href="index.html">Portfolio</a>
-            </div>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">EK</div>
             <ul class="nav-links">
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="index.html#about">À propos</a></li>
-                <li><a href="projets.html" class="active">Projets</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#skills">Compétences</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section class="projects-hero">
+    <!-- Section Hero -->
+    <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Mes Projets</h1>
-            <p>Découvrez une sélection de mes réalisations et projets personnels</p>
+            <h1>Erhan Kilinc</h1>
+            <p class="subtitle">Étudiant en Réseaux et Télécommunications</p>
+            <p class="description">
+                Passionné par les technologies réseau et la cybersécurité, 
+                je développe mes compétences à travers des projets concrets et innovants.
+            </p>
+            <a href="#projects" class="cta-button">Découvrir mes projets</a>
         </div>
     </section>
 
-    <!-- Filter Section -->
-    <section class="filter-section">
-        <div class="filter-container">
-            <h3>Filtrer par domaine</h3>
-            <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all">Toutes</button>
-                <button class="filter-btn" data-filter="s1">Semestre 1</button>
-                <button class="filter-btn" data-filter="s2">Semestre 2</button>
-                <button class="filter-btn" data-filter="reseau">Réseau</button>
-                <button class="filter-btn" data-filter="securite">Sécurité</button>
+    <!-- Section À propos -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">À propos de moi</h2>
+            <div class="about-content fade-in">
+                <div class="about-image">
+                    <div class="profile-pic">EK</div>
+                </div>
+                <div class="about-text">
+                    <h3>Qui suis-je ?</h3>
+                    <p>
+                        Je m'appelle Erhan Kilinc, j'ai 18 ans et je suis actuellement étudiant 
+                        en Réseaux et Télécommunications. Ma formation me permet d'acquérir 
+                        des compétences solides dans les domaines de l'informatique, des réseaux, 
+                        de la cybersécurité et des télécommunications.
+                    </p>
+                    <p>
+                        Curieux et motivé, j'aime relever les défis techniques et comprendre 
+                        le fonctionnement des systèmes complexes. Mon objectif est de devenir 
+                        un expert en sécurité informatique et en architecture réseau.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Grid -->
-    <section class="projects-section">
-        <div class="projects-container">
-            
-            <!-- SAE 1.1 -->
-            <div class="project-item" data-category="s1 securite">
-                <div class="project-image">
-                    <div class="project-overlay">
-                        <div class="project-links">
-                            <a href="#" class="project-link">
-                                <span>📋</span> Voir le rapport
-                            </a>
-                            <a href="#" class="project-link">
-                                <span>🔒</span> Guide sécurité
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-placeholder">🛡️</div>
+    <!-- Section Projets SAE -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">Mes Projets SAE</h2>
+            <div class="projects-grid fade-in">
+                <div class="project-card" onclick="openModal('modal-sae11')">
+                    <h3>SAE 1.1 - Hygiène Informatique</h3>
+                    <p>Sensibilisation à l'hygiène informatique et à la cybersécurité. 
+                       Apprentissage des bonnes pratiques de sécurité et des menaces courantes.</p>
+                    <span class="project-tag">Cybersécurité</span>
+                    <button class="view-details">Voir les détails</button>
                 </div>
-                <div class="project-content">
-                    <div class="project-category">SAE 1.1 - Semestre 1</div>
-                    <h3>Sensibilisation à l'hygiène informatique et à la cybersécurité</h3>
-                    <p>Étude des bonnes pratiques en matière de sécurité informatique, analyse des vulnérabilités courantes et sensibilisation aux risques cyber. Création d'un guide de bonnes pratiques et mise en situation avec des exercices pratiques de phishing et de social engineering.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Cybersécurité</span>
-                        <span class="tech-tag">ANSSI</span>
-                        <span class="tech-tag">Phishing</span>
-                        <span class="tech-tag">RGPD</span>
-                    </div>
-                    <div class="project-stats">
-                        <div class="stat">
-                            <span class="stat-number">3</span>
-                            <span class="stat-label">semaines</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">2023</span>
-                            <span class="stat-label">année</span>
-                        </div>
-                    </div>
+
+                <div class="project-card" onclick="openModal('modal-sae12')">
+                    <h3>SAE 1.2 - Initiation aux Réseaux</h3>
+                    <p>Découverte des fondamentaux des réseaux informatiques, protocoles 
+                       de communication et architecture réseau.</p>
+                    <span class="project-tag">Réseaux</span>
+                    <button class="view-details">Voir les détails</button>
+                </div>
+
+                <div class="project-card" onclick="openModal('modal-sae13')">
+                    <h3>SAE 1.3 - Dispositifs de Transmission</h3>
+                    <p>Étude et analyse des différents dispositifs de transmission 
+                       de données et leurs caractéristiques techniques.</p>
+                    <span class="project-tag">Télécommunications</span>
+                    <button class="view-details">Voir les détails</button>
+                </div>
+
+                <div class="project-card" onclick="openModal('modal-sae14')">
+                    <h3>SAE 1.4 - Présence Numérique</h3>
+                    <p>Création et gestion d'une présence professionnelle sur Internet, 
+                       développement de compétences en communication digitale.</p>
+                    <span class="project-tag">Web</span>
+                    <button class="view-details">Voir les détails</button>
+                </div>
+
+                <div class="project-card" onclick="openModal('modal-sae15')">
+                    <h3>SAE 1.5 - Traitement de Données</h3>
+                    <p>Analyse, traitement et visualisation de données avec des outils 
+                       spécialisés et langages de programmation.</p>
+                    <span class="project-tag">Data</span>
+                    <button class="view-details">Voir les détails</button>
+                </div>
+
+                <div class="project-card" onclick="openModal('modal-sae21')">
+                    <h3>SAE 2.1 - Réseau Petite Structure</h3>
+                    <p>Conception et mise en place d'un réseau informatique complet 
+                       pour une petite structure d'entreprise.</p>
+                    <span class="project-tag">Infrastructure</span>
+                    <button class="view-details">Voir les détails</button>
+                </div>
+
+                <div class="project-card" onclick="openModal('modal-sae22')">
+                    <h3>SAE 2.2 - Mesure de Signaux</h3>
+                    <p>Caractérisation et mesure de signaux et systèmes de télécommunications 
+                       avec des instruments professionnels.</p>
+                    <span class="project-tag">Mesures</span>
+                    <button class="view-details">Voir les détails</button>
+                </div>
+
+                <div class="project-card" onclick="openModal('modal-sae23')">
+                    <h3>SAE 2.3 - Solution Informatique</h3>
+                    <p>Développement et déploiement d'une solution informatique complète 
+                       adaptée aux besoins d'une entreprise.</p>
+                    <span class="project-tag">Développement</span>
+                    <button class="view-details">Voir les détails</button>
+                </div>
+
+                <div class="project-card" onclick="openModal('modal-sae24')">
+                    <h3>SAE 2.4 - Projet Intégratif</h3>
+                    <p>Projet de synthèse mobilisant l'ensemble des compétences acquises 
+                       dans un contexte professionnel réaliste.</p>
+                    <span class="project-tag">Intégration</span>
+                    <button class="view-details">Voir les détails</button>
                 </div>
             </div>
-
-            <!-- SAE 1.2 -->
-            <div class="project-item" data-category="s1 reseau">
-                <div class="project-image">
-                    <div class="project-overlay">
-                        <div class="project-links">
-                            <a href="#" class="project-link">
-                                <span>📋</span> Voir le rapport
-                            </a>
-                            <a href="#" class="project-link">
-                                <span>🌐</span> Schémas réseau
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-placeholder">🌐</div>
-                </div>
-                <div class="project-content">
-                    <div class="project-category">SAE 1.2 - Semestre 1</div>
-                    <h3>S'initier aux réseaux informatiques</h3>
-                    <p>Découverte des concepts fondamentaux des réseaux informatiques : modèle OSI, protocoles TCP/IP, adressage IPv4. Configuration de base d'équipements réseau et initiation aux outils d'analyse comme Wireshark. Premier contact avec les commandes réseau essentielles.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">TCP/IP</span>
-                        <span class="tech-tag">IPv4</span>
-                        <span class="tech-tag">Wireshark</span>
-                        <span class="tech-tag">Ping</span>
-                    </div>
-                    <div class="project-stats">
-                        <div class="stat">
-                            <span class="stat-number">4</span>
-                            <span class="stat-label">semaines</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">2023</span>
-                            <span class="stat-label">année</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- SAE 1.3 -->
-            <div class="project-item" data-category="s1">
-                <div class="project-image">
-                    <div class="project-overlay">
-                        <div class="project-links">
-                            <a href="#" class="project-link">
-                                <span>📋</span> Voir le rapport
-                            </a>
-                            <a href="#" class="project-link">
-                                <span>📡</span> Mesures pratiques
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-placeholder">📡</div>
-                </div>
-                <div class="project-content">
-                    <div class="project-category">SAE 1.3 - Semestre 1</div>
-                    <h3>Découvrir un dispositif de transmission</h3>
-                    <p>Étude théorique et pratique des dispositifs de transmission : fibres optiques, ondes radio, câbles cuivre. Mesures de signaux, analyse de la qualité de transmission et caractérisation des supports physiques. Utilisation d'équipements de mesure professionnels.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Fibre optique</span>
-                        <span class="tech-tag">Ondes radio</span>
-                        <span class="tech-tag">Oscilloscope</span>
-                        <span class="tech-tag">OTDR</span>
-                    </div>
-                    <div class="project-stats">
-                        <div class="stat">
-                            <span class="stat-number">5</span>
-                            <span class="stat-label">semaines</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">2023</span>
-                            <span class="stat-label">année</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- SAE 1.4 -->
-            <div class="project-item" data-category="s1">
-                <div class="project-image">
-                    <div class="project-overlay">
-                        <div class="project-links">
-                            <a href="#" class="project-link">
-                                <span>👁️</span> Voir le site
-                            </a>
-                            <a href="#" class="project-link">
-                                <span>💻</span> Code source
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-placeholder">🌍</div>
-                </div>
-                <div class="project-content">
-                    <div class="project-category">SAE 1.4 - Semestre 1</div>
-                    <h3>Se présenter sur Internet</h3>
-                    <p>Création d'un site web personnel responsive présentant mon parcours, mes compétences et mes projets. Développement en HTML5/CSS3 avec attention particulière portée à l'accessibilité, au SEO et aux bonnes pratiques du web. Hébergement et mise en ligne.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">HTML5</span>
-                        <span class="tech-tag">CSS3</span>
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">Responsive</span>
-                    </div>
-                    <div class="project-stats">
-                        <div class="stat">
-                            <span class="stat-number">6</span>
-                            <span class="stat-label">semaines</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">2023</span>
-                            <span class="stat-label">année</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- SAE 1.5 -->
-            <div class="project-item" data-category="s1">
-                <div class="project-image">
-                    <div class="project-overlay">
-                        <div class="project-links">
-                            <a href="#" class="project-link">
-                                <span>📋</span> Voir le rapport
-                            </a>
-                            <a href="#" class="project-link">
-                                <span>📊</span> Analyses données
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-placeholder">📊</div>
-                </div>
-                <div class="project-content">
-                    <div class="project-category">SAE 1.5 - Semestre 1</div>
-                    <h3>Traiter des données</h3>
-                    <p>Collecte, analyse et traitement de données issues de réseaux informatiques. Utilisation d'outils statistiques et de programmation pour extraire des informations pertinentes. Création de visualisations et de rapports d'analyse avec Python et des librairies spécialisées.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Pandas</span>
-                        <span class="tech-tag">Matplotlib</span>
-                        <span class="tech-tag">SQL</span>
-                    </div>
-                    <div class="project-stats">
-                        <div class="stat">
-                            <span class="stat-number">4</span>
-                            <span class="stat-label">semaines</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">2023</span>
-                            <span class="stat-label">année</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- SAE 2.1 -->
-            <div class="project-item" data-category="s2 reseau">
-                <div class="project-image">
-                    <div class="project-overlay">
-                        <div class="project-links">
-                            <a href="#" class="project-link">
-                                <span>📋</span> Voir le rapport
-                            </a>
-                            <a href="#" class="project-link">
-                                <span>🔧</span> Configuration
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-placeholder">🏢</div>
-                </div>
-                <div class="project-content">
-                    <div class="project-category">SAE 2.1 - Semestre 2</div>
-                    <h3>Construire un réseau informatique pour une petite structure</h3>
-                    <p>Conception et déploiement complet d'une infrastructure réseau pour une PME de 50 postes. Configuration de switchs, routeurs, serveurs DHCP/DNS, mise en place de VLAN et sécurisation des accès. Documentation technique et formation des utilisateurs incluses.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Cisco IOS</span>
-                        <span class="tech-tag">VLAN</span>
-                        <span class="tech-tag">DHCP/DNS</span>
-                        <span class="tech-tag">Firewall</span>
-                    </div>
-                    <div class="project-stats">
-                        <div class="stat">
-                            <span class="stat-number">8</span>
-                            <span class="stat-label">semaines</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">2024</span>
-                            <span class="stat-label">année</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- SAE 2.2 -->
-            <div class="project-item" data-category="s2">
-                <div class="project-image">
-                    <div class="project-overlay">
-                        <div class="project-links">
-                            <a href="#" class="project-link">
-                                <span>📋</span> Voir le rapport
-                            </a>
-                            <a href="#" class="project-link">
-                                <span>📈</span> Résultats mesures
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-placeholder">📈</div>
-                </div>
-                <div class="project-content">
-                    <div class="project-category">SAE 2.2 - Semestre 2</div>
-                    <h3>Mesurer et caractériser un signal ou un système</h3>
-                    <p>Étude approfondie des caractéristiques de signaux télécoms : analyse spectrale, mesures de bruit, caractérisation de filtres. Utilisation d'équipements professionnels (analyseur de spectre, générateur de signaux) et développement de protocoles de mesure rigoureux.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Analyseur spectre</span>
-                        <span class="tech-tag">MATLAB</span>
-                        <span class="tech-tag">FFT</span>
-                        <span class="tech-tag">Filtrage</span>
-                    </div>
-                    <div class="project-stats">
-                        <div class="stat">
-                            <span class="stat-number">6</span>
-                            <span class="stat-label">semaines</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">2024</span>
-                            <span class="stat-label">année</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- SAE 2.3 -->
-            <div class="project-item" data-category="s2">
-                <div class="project-image">
-                    <div class="project-overlay">
-                        <div class="project-links">
-                            <a href="#" class="project-link">
-                                <span>📋</span> Voir le rapport
-                            </a>
-                            <a href="#" class="project-link">
-                                <span>💼</span> Solution déployée
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-placeholder">💼</div>
-                </div>
-                <div class="project-content">
-                    <div class="project-category">SAE 2.3 - Semestre 2</div>
-                    <h3>Mettre en place une solution informatique pour l'entreprise</h3>
-                    <p>Déploiement d'une solution informatique complète pour une entreprise cliente : serveurs Windows/Linux, services métier, sauvegarde, supervision. Gestion de projet avec cahier des charges, planning, tests et mise en production. Formation des équipes incluse.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Windows Server</span>
-                        <span class="tech-tag">Linux</span>
-                        <span class="tech-tag">Active Directory</span>
-                        <span class="tech-tag">VMware</span>
-                    </div>
-                    <div class="project-stats">
-                        <div class="stat">
-                            <span class="stat-number">10</span>
-                            <span class="stat-label">semaines</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">2024</span>
-                            <span class="stat-label">année</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- SAE 2.4 -->
-            <div class="project-item" data-category="s2">
-                <div class="project-image">
-                    <div class="project-overlay">
-                        <div class="project-links">
-                            <a href="#" class="project-link">
-                                <span>📋</span> Voir le rapport
-                            </a>
-                            <a href="#" class="project-link">
-                                <span>🎯</span> Projet final
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-placeholder">🎯</div>
-                </div>
-                <div class="project-content">
-                    <div class="project-category">SAE 2.4 - Semestre 2</div>
-                    <h3>Projet intégratif</h3>
-                    <p>Projet de synthèse combinant toutes les compétences acquises : conception d'une architecture réseau complexe intégrant sécurité, télécommunications et administration système. Travail en équipe avec méthodologie projet, livrables professionnels et soutenance finale.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Architecture réseau</span>
-                        <span class="tech-tag">Gestion projet</span>
-                        <span class="tech-tag">Sécurité</span>
-                        <span class="tech-tag">Documentation</span>
-                    </div>
-                    <div class="project-stats">
-                        <div class="stat">
-                            <span class="stat-number">12</span>
-                            <span class="stat-label">semaines</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">2024</span>
-                            <span class="stat-label">année</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </section>
 
-    <!-- Call to Action -->
-    <section class="cta-section">
-        <div class="cta-content">
-            <h2>Intéressé par une collaboration ?</h2>
-            <p>Discutons de votre prochain projet ensemble</p>
-            <a href="index.html#contact" class="cta-button">Me contacter</a>
+    <!-- Section Compétences -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">Mes Compétences</h2>
+            <div class="skills-grid fade-in">
+                <div class="skill-category">
+                    <div class="skill-icon">🔒</div>
+                    <h3>Cybersécurité</h3>
+                    <ul class="skill-list">
+                        <li>Hygiène informatique</li>
+                        <li>Analyse de menaces</li>
+                        <li>Sécurisation de systèmes</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-icon">🌐</div>
+                    <h3>Réseaux</h3>
+                    <ul class="skill-list">
+                        <li>Architecture réseau</li>
+                        <li>Protocoles TCP/IP</li>
+                        <li>Configuration équipements</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-icon">📡</div>
+                    <h3>Télécommunications</h3>
+                    <ul class="skill-list">
+                        <li>Transmission de données</li>
+                        <li>Analyse de signaux</li>
+                        <li>Mesures techniques</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-icon">💻</div>
+                    <h3>Informatique</h3>
+                    <ul class="skill-list">
+                        <li>Développement web</li>
+                        <li>Traitement de données</li>
+                        <li>Solutions entreprise</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="social-links">
-            <a href="#" class="social-link">🐙</a>
-            <a href="#" class="social-link">💼</a>
-            <a href="#" class="social-link">🐦</a>
-            <a href="#" class="social-link">📷</a>
+    <!-- Footer / Contact -->
+    <footer id="contact">
+        <div class="container">
+            <h2 class="section-title" style="color: white; margin-bottom: 2rem;">Contact</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <span>erhan.kilinc@example.com</span>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📱</div>
+                    <span>+33 X XX XX XX XX</span>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">💼</div>
+                    <span>LinkedIn</span>
+                </div>
+            </div>
+            <p>&copy; 2025 Erhan Kilinc - Tous droits réservés</p>
         </div>
-        <p>&copy; 2025 Mon Portfolio. Tous droits réservés.</p>
     </footer>
 
+    <!-- Modales pour les détails des projets -->
+    
+    <!-- Modal SAE 1.1 -->
+    <div id="modal-sae11" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-sae11')">&times;</span>
+            <h2>SAE 1.1 - Sensibilisation à l'hygiène informatique et à la cybersécurité</h2>
+            
+            <div class="modal-body">
+                <div class="project-info">
+                    <h3>📋 Description du projet</h3>
+                    <p>Ce projet vise à sensibiliser aux enjeux de la cybersécurité et à développer les bonnes pratiques d'hygiène informatique essentielles dans le monde professionnel.</p>
+                    
+                    <h3>🎯 Objectifs</h3>
+                    <ul>
+                        <li>Comprendre les principales menaces informatiques</li>
+                        <li>Apprendre les bonnes pratiques de sécurité</li>
+                        <li>Maîtriser la gestion des mots de passe</li>
+                        <li>Identifier les techniques d'ingénierie sociale</li>
+                    </ul>
+                    
+                    <h3>🛠️ Compétences développées</h3>
+                    <ul>
+                        <li>Analyse des vulnérabilités</li>
+                        <li>Prévention des attaques</li>
+                        <li>Sécurisation des données</li>
+                        <li>Sensibilisation utilisateurs</li>
+                    </ul>
+                    
+                    <h3>📊 Livrables</h3>
+                    <ul>
+                        <li>Audit de sécurité personnel</li>
+                        <li>Guide de bonnes pratiques</li>
+                        <li>Présentation de sensibilisation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal SAE 1.2 -->
+    <div id="modal-sae12" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-sae12')">&times;</span>
+            <h2>SAE 1.2 - S'initier aux réseaux informatiques</h2>
+            
+            <div class="modal-body">
+                <div class="project-info">
+                    <h3>📋 Description du projet</h3>
+                    <p>Découverte des fondamentaux des réseaux informatiques, de leur architecture et de leurs protocoles de communication.</p>
+                    
+                    <h3>🎯 Objectifs</h3>
+                    <ul>
+                        <li>Comprendre l'architecture réseau</li>
+                        <li>Maîtriser les protocoles TCP/IP</li>
+                        <li>Configurer des équipements réseau</li>
+                        <li>Analyser le trafic réseau</li>
+                    </ul>
+                    
+                    <h3>🛠️ Compétences développées</h3>
+                    <ul>
+                        <li>Configuration réseau</li>
+                        <li>Diagnostic de connectivité</li>
+                        <li>Subnetting et VLAN</li>
+                        <li>Utilisation d'outils réseau</li>
+                    </ul>
+                    
+                    <h3>📊 Livrables</h3>
+                    <ul>
+                        <li>Schéma d'architecture réseau</li>
+                        <li>Configuration des équipements</li>
+                        <li>Tests de connectivité</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal SAE 1.3 -->
+    <div id="modal-sae13" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-sae13')">&times;</span>
+            <h2>SAE 1.3 - Découvrir un dispositif de transmission</h2>
+            
+            <div class="modal-body">
+                <div class="project-info">
+                    <h3>📋 Description du projet</h3>
+                    <p>Étude approfondie des dispositifs de transmission de données et analyse de leurs caractéristiques techniques.</p>
+                    
+                    <h3>🎯 Objectifs</h3>
+                    <ul>
+                        <li>Analyser les supports de transmission</li>
+                        <li>Mesurer les caractéristiques des signaux</li>
+                        <li>Comprendre les modulations</li>
+                        <li>Évaluer les performances</li>
+                    </ul>
+                    
+                    <h3>🛠️ Compétences développées</h3>
+                    <ul>
+                        <li>Utilisation d'instruments de mesure</li>
+                        <li>Analyse spectrale</li>
+                        <li>Calcul de bande passante</li>
+                        <li>Évaluation de la qualité</li>
+                    </ul>
+                    
+                    <h3>📊 Livrables</h3>
+                    <ul>
+                        <li>Rapport d'analyse technique</li>
+                        <li>Mesures et graphiques</li>
+                        <li>Recommandations d'amélioration</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal SAE 1.4 -->
+    <div id="modal-sae14" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-sae14')">&times;</span>
+            <h2>SAE 1.4 - Se présenter sur Internet</h2>
+            
+            <div class="modal-body">
+                <div class="project-info">
+                    <h3>📋 Description du projet</h3>
+                    <p>Création d'une présence professionnelle en ligne et développement de compétences en communication digitale.</p>
+                    
+                    <h3>🎯 Objectifs</h3>
+                    <ul>
+                        <li>Créer un portfolio en ligne</li>
+                        <li>Développer son identité numérique</li>
+                        <li>Maîtriser les outils web</li>
+                        <li>Optimiser sa visibilité</li>
+                    </ul>
+                    
+                    <h3>🛠️ Compétences développées</h3>
+                    <ul>
+                        <li>Développement web (HTML/CSS)</li>
+                        <li>Design responsive</li>
+                        <li>Référencement SEO</li>
+                        <li>Communication digitale</li>
+                    </ul>
+                    
+                    <h3>📊 Livrables</h3>
+                    <ul>
+                        <li>Site web portfolio</li>
+                        <li>Profils réseaux sociaux professionnels</li>
+                        <li>Stratégie de communication</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal SAE 1.5 -->
+    <div id="modal-sae15" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-sae15')">&times;</span>
+            <h2>SAE 1.5 - Traiter de données</h2>
+            
+            <div class="modal-body">
+                <div class="project-info">
+                    <h3>📋 Description du projet</h3>
+                    <p>Analyse, traitement et visualisation de données avec des outils spécialisés et langages de programmation.</p>
+                    
+                    <h3>🎯 Objectifs</h3>
+                    <ul>
+                        <li>Collecter et nettoyer des données</li>
+                        <li>Appliquer des traitements statistiques</li>
+                        <li>Créer des visualisations</li>
+                        <li>Interpréter les résultats</li>
+                    </ul>
+                    
+                    <h3>🛠️ Compétences développées</h3>
+                    <ul>
+                        <li>Programmation (Python/R)</li>
+                        <li>Manipulation de données</li>
+                        <li>Visualisation graphique</li>
+                        <li>Analyse statistique</li>
+                    </ul>
+                    
+                    <h3>📊 Livrables</h3>
+                    <ul>
+                        <li>Scripts de traitement</li>
+                        <li>Tableaux de bord</li>
+                        <li>Rapport d'analyse</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal SAE 2.1 -->
+    <div id="modal-sae21" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-sae21')">&times;</span>
+            <h2>SAE 2.1 - Construire un réseau informatique pour une petite structure</h2>
+            
+            <div class="modal-body">
+                <div class="project-info">
+                    <h3>📋 Description du projet</h3>
+                    <p>Conception et déploiement d'une infrastructure réseau complète pour une petite entreprise, incluant sécurité et performance.</p>
+                    
+                    <h3>🎯 Objectifs</h3>
+                    <ul>
+                        <li>Analyser les besoins de l'entreprise</li>
+                        <li>Concevoir l'architecture réseau</li>
+                        <li>Configurer les équipements</li>
+                        <li>Mettre en place la sécurité</li>
+                    </ul>
+                    
+                    <h3>🛠️ Compétences développées</h3>
+                    <ul>
+                        <li>Administration réseau</li>
+                        <li>Configuration VLAN</li>
+                        <li>Gestion des accès</li>
+                        <li>Monitoring réseau</li>
+                    </ul>
+                    
+                    <h3>📊 Livrables</h3>
+                    <ul>
+                        <li>Plan d'architecture réseau</li>
+                        <li>Documentation technique</li>
+                        <li>Tests de performance</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal SAE 2.2 -->
+    <div id="modal-sae22" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-sae22')">&times;</span>
+            <h2>SAE 2.2 - Mesurer et caractériser un signal ou un système</h2>
+            
+            <div class="modal-body">
+                <div class="project-info">
+                    <h3>📋 Description du projet</h3>
+                    <p>Caractérisation complète de signaux et systèmes de télécommunications avec des instruments de mesure professionnels.</p>
+                    
+                    <h3>🎯 Objectifs</h3>
+                    <ul>
+                        <li>Maîtriser les instruments de mesure</li>
+                        <li>Analyser les caractéristiques des signaux</li>
+                        <li>Évaluer les performances des systèmes</li>
+                        <li>Documenter les résultats</li>
+                    </ul>
+                    
+                    <h3>🛠️ Compétences développées</h3>
+                    <ul>
+                        <li>Utilisation d'oscilloscopes</li>
+                        <li>Analyse spectrale</li>
+                        <li>Mesures de distorsion</li>
+                        <li>Qualification de systèmes</li>
+                    </ul>
+                    
+                    <h3>📊 Livrables</h3>
+                    <ul>
+                        <li>Protocoles de mesure</li>
+                        <li>Résultats expérimentaux</li>
+                        <li>Rapport de caractérisation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal SAE 2.3 -->
+    <div id="modal-sae23" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-sae23')">&times;</span>
+            <h2>SAE 2.3 - Mettre en place une solution informatique pour l'entreprise</h2>
+            
+            <div class="modal-body">
+                <div class="project-info">
+                    <h3>📋 Description du projet</h3>
+                    <p>Développement et déploiement d'une solution informatique complète répondant aux besoins spécifiques d'une entreprise.</p>
+                    
+                    <h3>🎯 Objectifs</h3>
+                    <ul>
+                        <li>Analyser le cahier des charges</li>
+                        <li>Développer la solution</li>
+                        <li>Tester et valider</li>
+                        <li>Déployer et former</li>
+                    </ul>
+                    
+                    <h3>🛠️ Compétences développées</h3>
+                    <ul>
+                        <li>Gestion de projet</li>
+                        <li>Développement d'applications</li>
+                        <li>Base de données</li>
+                        <li>Formation utilisateurs</li>
+                    </ul>
+                    
+                    <h3>📊 Livrables</h3>
+                    <ul>
+                        <li>Application fonctionnelle</li>
+                        <li>Documentation utilisateur</li>
+                        <li>Plan de déploiement</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal SAE 2.4 -->
+    <div id="modal-sae24" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-sae24')">&times;</span>
+            <h2>SAE 2.4 - Projet intégratif</h2>
+            
+            <div class="modal-body">
+                <div class="project-info">
+                    <h3>📋 Description du projet</h3>
+                    <p>Projet de synthèse mobilisant l'ensemble des compétences acquises dans un contexte professionnel réaliste et pluridisciplinaire.</p>
+                    
+                    <h3>🎯 Objectifs</h3>
+                    <ul>
+                        <li>Intégrer toutes les compétences</li>
+                        <li>Gérer un projet complexe</li>
+                        <li>Travailler en équipe</li>
+                        <li>Présenter les résultats</li>
+                    </ul>
+                    
+                    <h3>🛠️ Compétences développées</h3>
+                    <ul>
+                        <li>Gestion de projet avancée</li>
+                        <li>Travail collaboratif</li>
+                        <li>Communication professionnelle</li>
+                        <li>Synthèse technique</li>
+                    </ul>
+                    
+                    <h3>📊 Livrables</h3>
+                    <ul>
+                        <li>Projet technique complet</li>
+                        <li>Présentation finale</li>
+                        <li>Documentation projet</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
-    <script src="projets.js"></script>
 </body>
 </html>
