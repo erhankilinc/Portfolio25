@@ -31,14 +31,85 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Animation additionnelle pour les cartes de projets
+// Gestion des images de profil (fallback si image non trouvée)
 document.addEventListener('DOMContentLoaded', function() {
-    const projectCards = document.querySelectorAll('.project-card');
+    const profileImg = document.querySelector('.profile-pic-img');
+    const fallback = document.querySelector('.profile-pic-fallback');
     
-    projectCards.forEach((card, index) => {
-        card.style.animationDelay = `${index * 0.1}s`;
-        card.classList.add('card-animation');
-    });
+    if (profileImg) {
+        profileImg.addEventListener('error', function() {
+            this.style.display = 'none';
+            if (fallback) {
+                fallback.style.display = 'flex';
+            }
+        });
+        
+        profileImg.addEventListener('load', function() {
+            if (fallback) {
+                fallback.style.display = 'none';
+            }
+        });
+    }
+});
+
+// Gestion du clic sur les images des projets pour les agrandir
+document.addEventListener('click', function(e) {
+    if (e.target.classList.contains('project-image')) {
+        openImageOverlay(e.target.src, e.target.alt);
+    }
+});
+
+// Fonction pour ouvrir l'overlay d'image
+function openImageOverlay(src, alt) {
+    // Créer l'overlay s'il n'existe pas
+    let overlay = document.querySelector('.image-overlay');
+    if (!overlay) {
+        overlay = document.createElement('div');
+        overlay.className = 'image-overlay';
+        overlay.innerHTML = `
+            <span class="close-image">&times;</span>
+            <img src="" alt="">
+        `;
+        document.body.appendChild(overlay);
+        
+        // Ajouter les événements de fermeture
+        overlay.addEventListener('click', function(e) {
+            if (e.target === overlay || e.target.classList.contains('close-image')) {
+                closeImageOverlay();
+            }
+        });
+    }
+    
+    // Afficher l'image
+    const img = overlay.querySelector('img');
+    img.src = src;
+    img.alt = alt;
+    overlay.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+}
+
+// Fonction pour fermer l'overlay d'image
+function closeImageOverlay() {
+    const overlay = document.querySelector('.image-overlay');
+    if (overlay) {
+        overlay.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+}
+
+// Fermer l'overlay d'image avec Échap
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        const imageOverlay = document.querySelector('.image-overlay[style*="flex"]');
+        if (imageOverlay) {
+            closeImageOverlay();
+        } else {
+            const openModal = document.querySelector('.modal[style*="block"]');
+            if (openModal) {
+                closeModal(openModal.getAttribute('id'));
+            }
+        }
+    }
 });
 
 // Effet parallaxe simple sur le hero
