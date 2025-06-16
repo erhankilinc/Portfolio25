@@ -9,49 +9,171 @@
 </head>
 
 <body>
+    <!-- Particles Background -->
+    <div class="particles" id="particles"></div>
+
     <!-- Header -->
     <header>
         <nav class="container">
             <div class="logo">PORTFOLIO</div>
             <ul class="nav-links">
-                <li><a href="#about">Accueil</a></li>
+                <li><a href="#hero">Accueil</a></li>
                 <li><a href="#about">À propos</a></li>
                 <li><a href="#projects">Projets</a></li>
                 <li><a href="#skills">Compétences</a></li>
+                <li><a href="#projections">Projections</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Section Hero / À propos -->
-    <section id="about" class="hero">
-        <div class="hero-content">
-            <div class="about-section">
-                <div class="about-profile">
-                    <div class="about-image">
-                        <img src="IMG_1749.jpg" alt="Erhan Kilinc" class="profile-pic-img">
-                        <!-- Fallback si pas d'image -->
-                        <div class="profile-pic-fallback">EK</div>
+    <!-- Section Hero / Accueil -->
+    <section id="hero" class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-greeting">
+                        <span class="greeting-dot"></span>
+                        <span>Bonjour, je suis</span>
+                    </div>
+
+                    <h1 class="hero-name">Erhan Kilinc</h1>
+
+                    <div class="hero-role">
+                        <span class="role-highlight">Étudiant</span> en Cybersécurité
+                        <br>
+                        <span class="role-sub">Passionné de réseaux & sécurité informatique</span>
+                    </div>
+
+                    <p class="hero-description">
+                        En formation BUT Réseaux & Télécommunications, je développe mes compétences
+                        pour devenir expert en cybersécurité. Chaque projet me rapproche de mon objectif :
+                        protéger les systèmes de demain.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#about" class="btn-primary">
+                            Découvrir mon parcours
+                            <span class="btn-arrow">→</span>
+                        </a>
+                        <a href="#projects" class="btn-secondary">
+                            Voir mes projets
+                        </a>
                     </div>
                 </div>
+
+                <div class="hero-visual">
+                    <div class="hero-image">
+                        <div class="image-background"></div>
+                        <img src="IMG_1749.jpg" alt="Erhan Kilinc" class="profile-image">
+                        <div class="image-overlay"></div>
+                    </div>
+
+                    <div class="hero-badges">
+                        <div class="badge">
+                            <span class="badge-icon">🎓</span>
+                            <span class="badge-text">BUT R&T</span>
+                        </div>
+                        <div class="badge">
+                            <span class="badge-icon">🛡️</span>
+                            <span class="badge-text">Cybersécurité</span>
+                        </div>
+                        <div class="badge">
+                            <span class="badge-icon">🌍</span>
+                            <span class="badge-text">Normandie</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-footer">
+                <div class="scroll-hint">
+                    <span>Découvrir</span>
+                    <div class="scroll-arrow">↓</div>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">18</span>
+                        <span class="stat-label">ans</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">9</span>
+                        <span class="stat-label">projets SAE</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">2025</span>
+                        <span class="stat-label">diplôme</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-decoration">
+            <div class="decoration-circle decoration-1"></div>
+            <div class="decoration-circle decoration-2"></div>
+            <div class="decoration-circle decoration-3"></div>
+        </div>
+    </section>
+
+    <!-- Section À propos -->
+    <section id="about" class="section fade-in">
+        <div class="container">
+            <h2 class="section-title">À propos de moi</h2>
+
+            <div class="about-content">
                 <div class="about-text">
-                    <h1>À propos de moi</h1>
-                    <p class="subtitle">Étudiant en Réseaux et Télécommunications</p>
-                    <p class="description">
-                        Je m'appelle Erhan Kilinc, j'ai 18 ans et je suis actuellement étudiant
-                        en Réseaux et Télécommunications. Ma formation me permet d'acquérir
+                    <h3>Qui suis-je ?</h3>
+                    <p class="about-intro">
+                        Je m'appelle <strong>Erhan Kilinc</strong>, j'ai 18 ans et je suis actuellement étudiant
+                        en <strong>BUT Réseaux et Télécommunications</strong>. Ma formation me permet d'acquérir
                         des compétences solides dans les domaines de l'informatique, des réseaux,
                         de la cybersécurité et des télécommunications.
                     </p>
-                    <p class="description">
+
+                    <p class="about-description">
                         Curieux et motivé, j'aime relever les défis techniques et comprendre
                         le fonctionnement des systèmes complexes. Mon objectif est de devenir
-                        un expert en sécurité informatique et en architecture réseau.
+                        un expert en <strong>sécurité informatique</strong> et en <strong>architecture réseau</strong>.
                     </p>
+
+                    <p class="about-passion">
+                        Ce qui me passionne le plus ? <em>Protéger les données et sécuriser les infrastructures</em>
+                        dans un monde numérique en constante évolution. Chaque vulnérabilité découverte
+                        est une opportunité d'apprendre et de renforcer mes compétences.
+                    </p>
+
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">🎓</div>
+                            <h4>Formation</h4>
+                            <p>BUT Réseaux & Télécommunications</p>
+                        </div>
+
+                        <div class="highlight-item">
+                            <div class="highlight-icon">💡</div>
+                            <h4>Spécialisation</h4>
+                            <p>Cybersécurité & Architecture Réseau</p>
+                        </div>
+
+                        <div class="highlight-item">
+                            <div class="highlight-icon">🌍</div>
+                            <h4>Localisation</h4>
+                            <p>Normandie, France</p>
+                        </div>
+
+                        <div class="highlight-item">
+                            <div class="highlight-icon">🎯</div>
+                            <h4>Objectif</h4>
+                            <p>Expert Cybersécurité</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="cta-section">
-                <a href="#projects" class="cta-button">Découvrir mes projets</a>
+
+                <div class="about-image">
+                    <img src="IMG_1719.jpg" alt="Erhan Kilinc" class="profile-image">
+                </div>
             </div>
         </div>
     </section>
@@ -184,38 +306,120 @@
         </div>
     </section>
 
+    <!-- Section Projections -->
+    <section id="projections" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">Projections</h2>
+            <div class="projections-content fade-in">
+
+                <!-- Bilan première année -->
+                <div class="projection-bilan">
+                    <h3>Bilan de ma première année</h3>
+                    <p class="bilan-description">
+                        Cette première année en BUT Réseaux & Télécoms m'a permis de consolider ma passion pour la
+                        cybersécurité
+                        tout en développant des compétences techniques solides. Les projets pratiques m'ont appris
+                        l'importance
+                        du travail en équipe et de la rigueur dans l'approche technique.
+                    </p>
+
+                    <div class="bilan-grid">
+                        <div class="bilan-card positive">
+                            <h4>Points forts</h4>
+                            <ul class="bilan-list">
+                                <li>Capacité d'analyse et de résolution de problèmes</li>
+                                <li>Curiosité technique et veille technologique</li>
+                                <li>Travail collaboratif efficace</li>
+                                <li>Anglais niveau avancé</li>
+                            </ul>
+                        </div>
+
+                        <div class="bilan-card improvement">
+                            <h4>Axes d'amélioration</h4>
+                            <ul class="bilan-list">
+                                <li>Approfondissement des protocoles avancés</li>
+                                <li>Développement des compétences en communication</li>
+                                <li>Construire mon réseau professionnel</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Citation inspirante -->
+                <div class="projection-quote">
+                    <blockquote>
+                        "L'avenir appartient à ceux qui savent sécuriser les données de demain."
+                    </blockquote>
+                </div>
+
+                <!-- Timeline future -->
+                <div class="projection-timeline">
+                    <h3>Ma trajectoire</h3>
+
+                    <div class="timeline-container">
+                        <div class="timeline-item">
+                            <div class="timeline-date">2025-2026</div>
+                            <div class="timeline-content">
+                                <h4>Deuxième année BUT</h4>
+                                <p>Spécialisation en cybersécurité, projets avancés</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-date">2026-2027</div>
+                            <div class="timeline-content">
+                                <h4>Alternance</h4>
+                                <p>Recherche d'une alternance en sécurité des systèmes</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-date">2027+</div>
+                            <div class="timeline-content">
+                                <h4>Carrière</h4>
+                                <p>Ingénieur cybersécurité, expérience internationale</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <!-- Section Contact -->
     <section id="contact" class="fade-in">
         <div class="container">
             <h2 class="section-title">Me contacter</h2>
-            
+
             <div class="contact-content">
                 <!-- Formulaire de contact -->
                 <form class="contact-form" id="contactForm">
                     <div class="success-message" id="successMessage">
                         ✅ Message envoyé avec succès ! Je vous répondrai dans les plus brefs délais.
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="name">Nom complet</label>
                         <input type="text" id="name" name="name" placeholder="Votre nom et prénom" required>
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="email">Adresse email</label>
                         <input type="email" id="email" name="email" placeholder="votre.email@exemple.com" required>
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="subject">Sujet</label>
                         <input type="text" id="subject" name="subject" placeholder="Objet de votre message" required>
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Décrivez votre projet, question ou demande..." required></textarea>
+                        <textarea id="message" name="message" rows="5"
+                            placeholder="Décrivez votre projet, question ou demande..." required></textarea>
                     </div>
-                    
+
                     <button type="submit" class="cta-button form-submit-btn">
                         <span>📧</span>
                         Envoyer le message
@@ -227,8 +431,10 @@
                     <div class="contact-intro">
                         <h3>Parlons de votre projet</h3>
                         <p>
-                            Je suis toujours intéressé par de nouveaux défis techniques et opportunités de collaboration. 
-                            N'hésitez pas à me contacter pour discuter de vos projets en réseaux, cybersécurité ou développement.
+                            Je suis toujours intéressé par de nouveaux défis techniques et opportunités de
+                            collaboration.
+                            N'hésitez pas à me contacter pour discuter de vos projets en réseaux, cybersécurité ou
+                            développement.
                         </p>
                         <div class="response-time">
                             <div class="response-indicator"></div>
@@ -244,7 +450,7 @@
                                 <p>erh.kilinc@gmail.com</p>
                             </div>
                         </div>
-                        
+
                         <div class="contact-item">
                             <div class="contact-icon">📱</div>
                             <div class="contact-item-content">
@@ -252,7 +458,7 @@
                                 <p>+33 7 71 06 42 25</p>
                             </div>
                         </div>
-                        
+
                         <div class="contact-item">
                             <div class="contact-icon">📍</div>
                             <div class="contact-item-content">
@@ -260,7 +466,7 @@
                                 <p>Normandie, France</p>
                             </div>
                         </div>
-                        
+
                         <div class="contact-item">
                             <div class="contact-icon">💼</div>
                             <div class="contact-item-content">
@@ -271,7 +477,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="footer-copyright">
                 <p>&copy; 2025 Erhan Kilinc - Tous droits réservés</p>
             </div>
@@ -288,47 +494,50 @@
 
             <div class="modal-body">
                 <div class="project-images">
-                    <img src="images/sae11-1.jpg" alt="SAE 1.1 - Analyse sécurité" class="project-image">
-                    <img src="images/sae11-2.jpg" alt="SAE 1.1 - Guide bonnes pratiques" class="project-image">
+                    <img src="images/sae11-1.jpg" alt="SAE 1.1 - Certification ANSSI" class="project-image">
+                    <img src="images/sae11-2.jpg" alt="SAE 1.1 - Interface MOOC SecNumacadémie" class="project-image">
                 </div>
 
                 <div class="project-info">
-                    <h3>📋 Description du projet</h3>
-                    <p>Ce projet vise à sensibiliser aux enjeux de la cybersécurité et à développer les bonnes pratiques
-                        d'hygiène informatique essentielles dans le monde professionnel.</p>
+                    <h3>📋 Description des Travaux et Réalisations</h3>
+                    <p>J'ai suivi une formation complète via le MOOC SecNumacadémie de l'ANSSI, constituée de plusieurs
+                        modules théoriques approfondis couvrant l'ensemble des fondamentaux de la cybersécurité. Cette
+                        formation m'a permis d'acquérir les connaissances essentielles sur les menaces informatiques,
+                        les vulnérabilités système et les méthodes de protection. J'ai réalisé des évaluations pratiques
+                        sous forme de QCM et d'études de cas concrets, permettant de valider ma compréhension des enjeux
+                        sécuritaires. La formation s'est conclue par l'obtention d'une certification officielle
+                        attestant de ma maîtrise des concepts essentiels. J'ai également produit une synthèse
+                        documentaire personnelle regroupant les bonnes pratiques et procédures de sécurité à appliquer
+                        en contexte professionnel.</p>
 
                     <h3>🎯 Objectifs</h3>
                     <ul>
-                        <li>Réduire les risques d'incidents de sécurité : C'est l'objectif fondamental. En formant les
-                            utilisateurs aux menaces (phishing, malwares, rançongiciels, etc.)
-                            et aux bonnes pratiques, le projet cherche à diminuer significativement la probabilité de
-                            succès des cyberattaques et des erreurs humaines.</li>
-                        <li>Protéger les données sensibles : Qu'il s'agisse de données personnelles, professionnelles ou
-                            confidentielles, l'objectif est de garantir leur confidentialité,
-                            leur intégrité et leur disponibilité en évitant les fuites, les destructions ou les accès
-                            non autorisés.</li>
-                        <li>Renforcer la résilience face aux cybermenaces : Une meilleure compréhension des risques
-                            permet aux utilisateurs de réagir plus efficacement en cas d'incident,
-                            de limiter les dégâts et de faciliter la reprise des activités.</li>
-                        <li>Assurer la conformité réglementaire : Dans de nombreux contextes (comme le RGPD en Europe),
-                            la sensibilisation des employés est une obligation légale pour la
-                            protection des données. Le projet aide donc les organisations à respecter ces exigences.
+                        <li>Acquérir une <strong>culture sécuritaire</strong> fondamentale en informatique</li>
+                        <li>Comprendre les <strong>enjeux de la cybersécurité</strong> dans un contexte professionnel
                         </li>
+                        <li>Maîtriser les <strong>bonnes pratiques d'hygiène numérique</strong></li>
+                        <li>Développer une <strong>approche préventive</strong> face aux menaces cyber</li>
                     </ul>
 
-                    <h3>🛠️ Compétences développées</h3>
-                    <ul>
-                        <li>Analyse des vulnérabilités</li>
-                        <li>Prévention des attaques</li>
-                        <li>Sécurisation des données</li>
-                        <li>Sensibilisation utilisateurs</li>
-                    </ul>
+                    <h3>🛠️ Compétences acquises</h3>
+                    <p>J'ai développé des compétences techniques solides en identification et analyse des vulnérabilités
+                        informatiques, me permettant d'évaluer les risques sécuritaires d'un système d'information. J'ai
+                        appris à appliquer méthodiquement les correctifs de sécurité et à mettre en place une gestion
+                        rigoureuse des mots de passe avec des outils spécialisés. Sur le plan organisationnel, je
+                        maîtrise désormais la mise en place de procédures sécurisées adaptées au contexte d'entreprise
+                        et je sais sensibiliser efficacement les utilisateurs aux bonnes pratiques de sécurité. J'ai
+                        également acquis une compréhension approfondie du cadre réglementaire français et européen,
+                        notamment le RGPD et la Loi de Programmation Militaire, me permettant d'intégrer les contraintes
+                        légales dans mes recommandations sécuritaires.</p>
 
-                    <h3>📊 Livrables</h3>
+                    <h3>📊 Auto-évaluation du projet</h3>
                     <ul>
-                        <li>Audit de sécurité personnel</li>
-                        <li>Guide de bonnes pratiques</li>
-                        <li>Présentation de sensibilisation</li>
+                        <li><strong>Points forts</strong> : Formation certifiante reconnue, contenu actualisé par
+                            l'autorité nationale</li>
+                        <li><strong>Axes d'amélioration</strong> : Manque de travaux pratiques en laboratoire, approche
+                            principalement théorique</li>
+                        <li><strong>Impact</strong> : Base solide pour tous les projets futurs nécessitant une approche
+                            sécurisée</li>
                     </ul>
                 </div>
             </div>
@@ -339,44 +548,59 @@
     <div id="modal-sae12" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal-sae12')">&times;</span>
-            <h2>SAE 1.2 - S'initier aux réseaux informatiques</h2>
+            <h2>SAE 1.2 - S'initier aux réseaux informatiques (Fibre&Company)</h2>
 
             <div class="modal-body">
                 <div class="project-images">
-                    <img src="images/sae12-1.jpg" alt="SAE 1.2 - Architecture réseau" class="project-image">
-                    <img src="images/sae12-2.jpg" alt="SAE 1.2 - Configuration équipements" class="project-image">
+                    <img src="images/sae12-1.jpg" alt="SAE 1.2 - Architecture réseau Fibre&Company"
+                        class="project-image">
+                    <img src="images/sae12-2.jpg" alt="SAE 1.2 - Configuration VLAN" class="project-image">
                 </div>
 
                 <div class="project-info">
-                    <h3>📋 Description du projet</h3>
-                    <p>Découverte des fondamentaux des réseaux informatiques, de leur architecture et de leurs
-                        protocoles de communication.</p>
+                    <h3>📋 Description des Travaux et Réalisations</h3>
+                    <p>J'ai commencé par réaliser un audit complet de l'infrastructure réseau existante de l'entreprise
+                        Fibre&Company, analysant les 60 postes utilisateurs connectés via 2 switchs non-paramétrables et
+                        identifiant les faiblesses sécuritaires majeures. J'ai ensuite conçu une nouvelle architecture
+                        réseau évolutive capable de supporter 120 postes avec du matériel paramétrable professionnel.
+                        L'implémentation du prototype a nécessité la configuration avancée de switchs managés avec
+                        création de VLANs pour segmenter le trafic et améliorer la sécurité. J'ai mis en place les
+                        services réseau essentiels incluant un serveur DHCP avec réservations, un service DNS interne et
+                        des règles de routage optimisées. La sécurisation du réseau s'est faite par l'implémentation
+                        d'ACL (Access Control Lists) et de fonctionnalités de port-security sur les équipements
+                        d'interconnexion. J'ai finalisé le projet par la rédaction d'une documentation technique
+                        complète incluant les schémas réseau, les plans d'adressage et les procédures de maintenance.
+                    </p>
 
                     <h3>🎯 Objectifs</h3>
                     <ul>
-                        <li>Comprendre les principes fondamentaux des réseaux : Assimiler le vocabulaire et les concepts
-                            clés liés aux infrastructures et architectures réseau.</li>
-                        <li>Maîtriser les bases des protocoles de communication : Comprendre comment les données sont
-                            encapsulées, transmises et reçues en utilisant des protocoles comme TCP/IP.</li>
-                        <li>Appréhender l'adressage IP et le routage : Savoir attribuer et interpréter des adresses IP,
-                            et comprendre le rôle des routeurs dans la circulation des données.</li>
-                        <li>Diagnostiquer des problèmes réseau simples : Développer une capacité à identifier des pannes
-                            ou des dysfonctionnements basiques au sein d'un réseau.</li>
+                        <li><strong>Moderniser</strong> une infrastructure réseau obsolète</li>
+                        <li><strong>Sécuriser</strong> les communications internes</li>
+                        <li><strong>Optimiser</strong> les performances réseau</li>
+                        <li><strong>Préparer</strong> la montée en charge (doublement des effectifs)</li>
                     </ul>
 
-                    <h3>🛠️ Compétences développées</h3>
-                    <ul>
-                        <li>Configuration réseau</li>
-                        <li>Diagnostic de connectivité</li>
-                        <li>Subnetting et VLAN</li>
-                        <li>Utilisation d'outils réseau</li>
-                    </ul>
+                    <h3>🛠️ Compétences acquises</h3>
+                    <p>J'ai développé une expertise approfondie en configuration avancée de switchs managés, maîtrisant
+                        les technologies VLAN pour la segmentation réseau, le protocole STP (Spanning Tree Protocol)
+                        pour éviter les boucles et LACP (Link Aggregation Control Protocol) pour l'agrégation de liens.
+                        J'ai acquis des compétences solides en planification d'adressage IP avec la création de
+                        sous-réseaux optimisés et la gestion efficace de l'espace d'adressage. Ma compréhension de la
+                        sécurisation réseau s'est considérablement renforcée grâce à l'implémentation pratique de la
+                        segmentation réseau et des mécanismes de contrôle d'accès aux ressources. J'ai également
+                        développé des compétences en diagnostic réseau en utilisant des outils professionnels comme
+                        Wireshark pour l'analyse de trames, ainsi que les commandes ping et traceroute pour le
+                        dépannage. Enfin, j'ai perfectionné mes compétences en documentation technique, apprenant à
+                        créer des schémas réseau précis et des guides de maintenance complets.</p>
 
-                    <h3>📊 Livrables</h3>
+                    <h3>📊 Auto-évaluation du projet</h3>
                     <ul>
-                        <li>Schéma d'architecture réseau</li>
-                        <li>Configuration des équipements</li>
-                        <li>Tests de connectivité</li>
+                        <li><strong>Points forts</strong> : Projet concret avec contraintes réelles, approche
+                            progressive du réseau simple vers complexe</li>
+                        <li><strong>Axes d'amélioration</strong> : Temps limité pour tester toutes les fonctionnalités
+                            avancées, manque de tests de charge</li>
+                        <li><strong>Impact</strong> : Compréhension solide des fondamentaux réseau, base pour les SAE
+                            suivantes</li>
                     </ul>
                 </div>
             </div>
@@ -391,36 +615,50 @@
 
             <div class="modal-body">
                 <div class="project-images">
-                    <img src="images/sae13-1.jpg" alt="SAE 1.3 - Dispositif transmission" class="project-image">
-                    <img src="images/sae13-2.jpg" alt="SAE 1.3 - Analyse signaux" class="project-image">
+                    <img src="images/sae13-1.jpg" alt="SAE 1.3 - Mesures à l'oscilloscope" class="project-image">
+                    <img src="images/sae13-2.jpg" alt="SAE 1.3 - Analyse spectrale" class="project-image">
                 </div>
 
                 <div class="project-info">
-                    <h3>📋 Description du projet</h3>
-                    <p>Étude approfondie des dispositifs de transmission de données et analyse de leurs caractéristiques
-                        techniques.</p>
+                    <h3>📋 Description des Travaux et Réalisations</h3>
+                    <p>J'ai réalisé une étude théorique approfondie des principes physiques régissant la transmission de
+                        données, me familiarisant avec les concepts de modulation, d'atténuation et de bruit dans les
+                        canaux de communication. La partie pratique m'a permis de manipuler directement des équipements
+                        de transmission professionnels en laboratoire, effectuant des mesures précises sur différents
+                        types de signaux. J'ai procédé à des mesures systématiques et à la caractérisation complète des
+                        signaux transmis, analysant leurs propriétés temporelles et fréquentielles. L'utilisation
+                        d'appareils de mesure spécialisés m'a permis de réaliser des analyses spectrales détaillées et
+                        d'observer l'évolution des signaux dans le domaine fréquentiel. J'ai finalisé ce travail par la
+                        rédaction d'un rapport technique détaillé présentant mes observations, mesures et analyses avec
+                        une interprétation des phénomènes observés.</p>
 
                     <h3>🎯 Objectifs</h3>
                     <ul>
-                        <li>Analyser les supports de transmission</li>
-                        <li>Mesurer les caractéristiques des signaux</li>
-                        <li>Comprendre les modulations</li>
-                        <li>Évaluer les performances</li>
+                        <li>Comprendre les <strong>principes physiques</strong> de la transmission</li>
+                        <li>Maîtriser les <strong>outils de mesure</strong> spécialisés</li>
+                        <li>Analyser les <strong>caractéristiques</strong> d'un canal de transmission</li>
+                        <li>Établir le <strong>lien théorie-pratique</strong> en télécommunications</li>
                     </ul>
 
-                    <h3>🛠️ Compétences développées</h3>
-                    <ul>
-                        <li>Utilisation d'instruments de mesure</li>
-                        <li>Analyse spectrale</li>
-                        <li>Calcul de bande passante</li>
-                        <li>Évaluation de la qualité</li>
-                    </ul>
+                    <h3>🛠️ Compétences acquises</h3>
+                    <p>J'ai développé une maîtrise technique des appareils de mesure professionnels, notamment
+                        l'oscilloscope numérique pour l'analyse temporelle des signaux et l'analyseur de spectre pour
+                        l'étude fréquentielle. J'ai acquis des compétences solides en interprétation de signaux, sachant
+                        désormais analyser et interpréter les formes d'onde complexes dans les domaines temporel et
+                        fréquentiel. Mes connaissances en calculs de transmission se sont approfondies, me permettant de
+                        calculer avec précision les paramètres d'atténuation, les niveaux de bruit et les rapports
+                        signal sur bruit dans différentes configurations. J'ai également développé des compétences en
+                        rédaction technique spécialisée, apprenant à produire des rapports de mesure structurés avec une
+                        présentation claire des résultats et leur interprétation scientifique.</p>
 
-                    <h3>📊 Livrables</h3>
+                    <h3>📊 Auto-évaluation du projet</h3>
                     <ul>
-                        <li>Rapport d'analyse technique</li>
-                        <li>Mesures et graphiques</li>
-                        <li>Recommandations d'amélioration</li>
+                        <li><strong>Points forts</strong> : Approche expérimentale enrichissante, manipulation
+                            d'équipements professionnels</li>
+                        <li><strong>Axes d'amélioration</strong> : Complexité théorique importante, nécessité de
+                            renforcer les bases mathématiques</li>
+                        <li><strong>Impact</strong> : Compréhension concrète des phénomènes de transmission, préparation
+                            aux SAE avancées</li>
                     </ul>
                 </div>
             </div>
@@ -431,52 +669,64 @@
     <div id="modal-sae14" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal-sae14')">&times;</span>
-            <h2>SAE 1.4 - Se présenter sur Internet</h2>
+            <h2>SAE 1.4 - Se présenter sur Internet (Site Web HTML/CSS)</h2>
 
             <div class="modal-body">
                 <div class="project-images">
-                    <img src="images/sae14-1.jpg" alt="SAE 1.4 - Site web portfolio" class="project-image">
+                    <img src="images/sae14-1.jpg" alt="SAE 1.4 - Page d'accueil du site" class="project-image">
                 </div>
 
                 <div class="project-info">
-                    <h3>📋 Description du projet</h3>
-                    <p>Création d'une présence professionnelle en ligne et développement de compétences en communication
-                        digitale.</p>
+                    <h3>📋 Description des Travaux et Réalisations</h3>
+                    <p>J'ai développé un site web multipages entièrement responsive en utilisant les technologies HTML5
+                        et CSS3 modernes, créant une architecture web sémantique et accessible. La structure du site
+                        comprend une page d'accueil visuellement attractive, une page de contenu détaillée sur le thème
+                        choisi et une page de présentation personnelle, toutes reliées par une navigation cohérente.
+                        J'ai implémenté une mise en page avancée utilisant CSS Grid pour la structure générale et
+                        Flexbox pour les composants individuels, garantissant une adaptation parfaite sur tous les
+                        supports. Le développement a inclus la création d'animations CSS sophistiquées avec des
+                        transitions fluides et des effets keyframes pour améliorer l'expérience utilisateur. J'ai
+                        appliqué une démarche de développement professionnelle avec validation W3C complète et respect
+                        des standards d'accessibilité WCAG 2.0 AA. La gestion de version s'est faite via Git avec des
+                        commits sémantiques détaillés, et le déploiement automatique sur GitHub Pages avec intégration
+                        continue.</p>
 
                     <h3>🎯 Objectifs</h3>
                     <ul>
-                        <li>Construire une identité numérique professionnelle cohérente : Apprendre à créer et maintenir
-                            une image en ligne qui reflète leurs objectifs de carrière et leurs valeurs.</li>
-                        <li>Développer leur réseau professionnel en ligne : Utiliser les plateformes sociales
-                            professionnelles pour se connecter avec des acteurs de leur secteur et saisir des
-                            opportunités.</li>
-                        <li>Maîtriser les outils web</li>
-                        <li>Valoriser leurs compétences et expériences : Apprendre à présenter efficacement leur
-                            parcours académique et professionnel pour attirer l'attention de recruteurs ou partenaires.
-                        </li>
+                        <li>Maîtriser les <strong>technologies web front-end</strong></li>
+                        <li>Appliquer les <strong>standards du web</strong> et bonnes pratiques</li>
+                        <li>Développer une <strong>identité numérique</strong> professionnelle</li>
+                        <li>Intégrer les <strong>workflows de développement</strong> modernes</li>
                     </ul>
 
-                    <h3>🛠️ Compétences développées</h3>
-                    <ul>
-                        <li>Développement web (HTML/CSS)</li>
-                        <li>Design responsive</li>
-                        <li>Référencement SEO</li>
-                        <li>Communication digitale</li>
-                    </ul>
+                    <h3>🛠️ Compétences acquises</h3>
+                    <p>J'ai développé une expertise complète en développement web front-end, maîtrisant parfaitement
+                        HTML5 sémantique pour structurer le contenu et CSS3 avancé pour la mise en forme et les
+                        animations. Mes compétences en responsive design me permettent désormais de créer des interfaces
+                        qui s'adaptent parfaitement à tous les dispositifs grâce aux media queries et aux techniques de
+                        mise en page flexible. J'ai acquis une solide compréhension des principes UX/UI Design, sachant
+                        concevoir des interfaces ergonomiques, accessibles et visuellement cohérentes qui offrent une
+                        excellente expérience utilisateur. Ma maîtrise des outils de développement modernes inclut Git
+                        pour le versioning, GitHub pour l'hébergement de code et les systèmes de validation automatique
+                        pour maintenir la qualité du code. J'ai également développé des compétences en optimisation web,
+                        sachant améliorer les performances de chargement, optimiser le référencement naturel et assurer
+                        la compatibilité entre différents navigateurs.</p>
 
-                    <h3>📊 Livrables</h3>
+                    <h3>📊 Auto-évaluation du projet</h3>
                     <ul>
-                        <li>Site web portfolio</li>
-                        <li>Profils réseaux sociaux professionnels</li>
-                        <li>Stratégie de communication</li>
+                        <li><strong>Points forts</strong> : Projet créatif permettant l'expression personnelle, maîtrise
+                            complète de la chaîne de développement</li>
+                        <li><strong>Axes d'amélioration</strong> : Manque d'interactivité JavaScript, design parfois
+                            basique</li>
+                        <li><strong>Impact</strong> : Portfolio professionnel utilisable, bases solides pour le
+                            développement web</li>
                     </ul>
 
                     <div class="project-links">
-                        <a href="https://erhankilinc.github.io/sae14_11/" target="_blank" class="project-link"
-                            id="sae14-link">
+                        <a href="https://erhankilinc.github.io/sae14_11/" target="_blank" class="project-link">
                             🌐 Voir le site web du projet
                         </a>
-                        <a href="https://github.com/erhankilinc" target="_blank" class="project-link" id="sae14-github">
+                        <a href="https://github.com/erhankilinc" target="_blank" class="project-link">
                             📁 Code source sur GitHub
                         </a>
                     </div>
@@ -489,68 +739,63 @@
     <div id="modal-sae15" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal-sae15')">&times;</span>
-            <h2>SAE 1.5 - Traiter de données</h2>
+            <h2>SAE 1.5 - Traiter des données (API Pokémon Python)</h2>
 
             <div class="modal-body">
                 <div class="project-images">
-                    <img src="images/sae15-1.jpg" alt="SAE 1.5 - Analyse données" class="project-image">
+                    <img src="images/sae15-1.jpg" alt="SAE 1.5 - Outil pokefiche" class="project-image">
                 </div>
 
                 <div class="project-info">
-                    <h3>📋 Description du projet</h3>
-                    <p>Analyse, traitement et visualisation de données avec des outils spécialisés et langages de
-                        programmation.</p>
+                    <h3>📋 Description des Travaux et Réalisations</h3>
+                    <p>J'ai développé en Python deux outils d'analyse de données complémentaires exploitant l'API
+                        RESTful Pokémon pour traiter et présenter des informations de manière automatisée. Le premier
+                        outil, pokefiche, génère automatiquement des fiches individuelles détaillées pour chaque
+                        Pokémon, présentant ses caractéristiques (taille, poids, types, statistiques) avec une mise en
+                        forme professionnelle aux formats Markdown et HTML. Le second outil, pokestats, effectue des
+                        analyses statistiques avancées sur des collections de Pokémon, permettant de découvrir des
+                        corrélations et tendances intéressantes comme la relation entre taille et points de vie.
+                        L'intégration de l'API REST a nécessité la maîtrise des requêtes HTTP avec gestion d'erreurs
+                        robuste et optimisation des performances par mise en cache. J'ai implémenté un système de
+                        traitement de données JSON sophistiqué avec parsing automatique, validation des données et
+                        nettoyage des informations incohérentes. La génération de contenu s'appuie sur un système de
+                        templates personnalisables permettant de produire des visualisations attrayantes avec graphiques
+                        et tableaux de synthèse.</p>
 
                     <h3>🎯 Objectifs</h3>
                     <ul>
-                        <li>Appliquer une logique de traitement de données
-                            Écrire des fonctions claires, testables et réutilisables (download_poke, poke_to_md,
-                            get_dataset, etc.).
-                            Gérer les fichiers d'entrée et de sortie proprement.
-                            Mettre en place une structure de projet modulaire :
-                            Un fichier par rôle (pokefiche.py, stats.py, md_to_html.py…).
-                            Possibilité d'utiliser les fonctions via ligne de commande ou import Python.
-                        </li>
-                        <li>Manipuler des données issues d'une API
-                            Comprendre le fonctionnement d'une API REST (notamment GET, format JSON, endpoint,
-                            paramètres).
-                            Faire des requêtes HTTP en Python avec requests pour récupérer des données à partir d'une
-                            source distante (la PokeAPI).
-                            Extraire les informations utiles depuis la réponse JSON : types, taille, poids,
-                            statistiques, images…</li>
-                        <li>Structurer et formater des données
-                            Organiser les données dans un format lisible (Markdown) avec une hiérarchie claire (titres,
-                            listes, sections).
-                            Générer automatiquement une fiche à partir d'un identifiant : fiche_pokemon(25) → Pikachu.
-                            Générer une page web simple (HTML) en convertissant automatiquement le Markdown.
-                            Mettre en valeur les données visuellement (ajout d'images, structure logique, mise en page).
-                        </li>
-                        <li>Analyser et représenter des statistiques
-                            Collecter un jeu de données plus large (plusieurs Pokémon).
-                            Implémenter une fonction qui calcule des statistiques pertinentes :
-                            Moyenne de PV selon la taille.
-                            Répartition des types.
-                            Comparaison d'attributs (poids vs expérience, etc.).
-                            Présenter ces statistiques dans une page synthétique en Markdown puis HTML.</li>
+                        <li>Maîtriser la <strong>consommation d'APIs REST</strong></li>
+                        <li>Développer des <strong>compétences en Python</strong> pour le traitement de données</li>
+                        <li>Implémenter la <strong>génération automatique</strong> de contenu</li>
+                        <li>Produire des <strong>analyses statistiques</strong> pertinentes</li>
                     </ul>
 
-                    <h3>🛠️ Compétences développées</h3>
-                    <ul>
-                        <li>Programmation (Python/R)</li>
-                        <li>Manipulation de données</li>
-                        <li>Visualisation graphique</li>
-                        <li>Analyse statistique</li>
-                    </ul>
+                    <h3>🛠️ Compétences acquises</h3>
+                    <p>J'ai développé une expertise solide en programmation Python, maîtrisant les structures de données
+                        complexes, la gestion d'erreurs avec try-catch personnalisés et l'architecture modulaire pour
+                        créer du code maintenable et réutilisable. Mes compétences en intégration d'APIs REST me
+                        permettent désormais de gérer efficacement les requêtes HTTP, l'authentification par clés API et
+                        la pagination pour traiter de gros volumes de données. J'ai acquis des compétences avancées en
+                        traitement de données, sachant parser des formats JSON complexes, valider l'intégrité des
+                        données reçues et nettoyer les informations pour éliminer les incohérences. Ma maîtrise de la
+                        génération automatique de contenu inclut l'utilisation de systèmes de templates, le formatage
+                        automatique multi-format et la création de rapports personnalisés. Enfin, j'ai développé des
+                        compétences en analyse statistique de base, sachant effectuer des agrégations de données, trier
+                        et filtrer les informations et identifier des corrélations simples entre différentes variables.
+                    </p>
 
-                    <h3>📊 Livrables</h3>
+                    <h3>📊 Auto-évaluation du projet</h3>
                     <ul>
-                        <li>Scripts de traitement</li>
-                        <li>Tableaux de bord</li>
-                        <li>Rapport d'analyse</li>
+                        <li><strong>Points forts</strong> : Projet ludique et motivant, apprentissage concret des APIs
+                        </li>
+                        <li><strong>Axes d'amélioration</strong> : Analyses statistiques basiques, interface utilisateur
+                            limitée</li>
+                        <li><strong>Impact</strong> : Compétences Python transférables, compréhension des architectures
+                            API</li>
                     </ul>
 
                     <div class="project-links">
-                        <a href="https://github.com/erhankilinc/sae15-1" target="_blank" class="project-link" id="sae15-github">
+                        <a href="https://github.com/erhankilinc/sae15-1" target="_blank" class="project-link">
                             📁 Code source sur GitHub
                         </a>
                     </div>
@@ -563,65 +808,60 @@
     <div id="modal-sae21" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal-sae21')">&times;</span>
-            <h2>SAE 2.1 - Construire un réseau informatique pour une petite structure</h2>
+            <h2>SAE 2.1 - Construire un réseau informatique (Windows/Windows Server)</h2>
 
             <div class="modal-body">
                 <div class="project-images">
-                    <img src="images/sae21-1.jpg" alt="SAE 2.1 - Plan réseau entreprise" class="project-image">
+                    <img src="images/sae21-1.jpg" alt="SAE 2.1 - Configuration Active Directory" class="project-image">
+                    <img src="images/sae12-2.jpg" alt="SAE 2.1 - Politiques de groupe" class="project-image">
                 </div>
 
                 <div class="project-info">
-                    <h3>📋 Description du projet</h3>
-                    <p>Conception et déploiement d'une infrastructure réseau complète pour une petite entreprise,
-                        incluant sécurité et performance.</p>
+                    <h3>📋 Description des Travaux et Réalisations</h3>
+                    <p>J'ai déployé une infrastructure Windows Server complète intégrant tous les services d'annuaire
+                        essentiels pour une organisation moderne, configurant un environnement Active Directory robuste
+                        avec gestion centralisée de tous les utilisateurs et ressources. La mise en place des services
+                        réseau critiques a inclus la configuration d'un serveur DNS intégré à Active Directory, d'un
+                        service DHCP avec réservations automatiques et de partages de fichiers sécurisés avec
+                        permissions granulaires. J'ai implémenté un système complet de politiques de groupe (GPO)
+                        permettant la configuration automatisée et centralisée de tous les postes utilisateurs,
+                        garantissant l'homogénéité et la sécurité de l'environnement. La sécurisation de
+                        l'infrastructure s'est faite par la configuration avancée du pare-feu Windows Server,
+                        l'installation et la configuration d'un antivirus centralisé avec mises à jour automatiques.
+                        J'ai finalisé le projet en mettant en place des outils de surveillance et de maintenance avec
+                        administration à distance pour optimiser la gestion quotidienne du système.</p>
 
                     <h3>🎯 Objectifs</h3>
                     <ul>
-                        <li> Installation et configuration du serveur Windows
-                            Installer Windows Server en VM (via VirtualBox ou Proxmox).
-                            Configurer l'adresse IP statique, le masque, la passerelle, et les DNS.
-                            Renommer la machine et l'intégrer à la topologie réseau prévue.</li>
-                        <li>Mise en place du contrôleur de domaine (AD DS + DNS)
-                            Promouvoir le serveur en contrôleur de domaine.
-                            Installer et configurer AD DS (Active Directory Domain Services).
-                            Installer le service DNS intégré.
-                            Comprendre les notions de forêt, domaine, relations de confiance.</li>
-                        <li>Gestion des utilisateurs et des groupes
-                            Créer des utilisateurs et groupes localement (GUI ou PowerShell).
-                            Appliquer la méthode AGDLP pour organiser les droits d'accès :
-                            A : Compte utilisateur (Account)
-                            G : Groupe global (Global group)
-                            D : Groupe de domaine local (Domain Local group)
-                            L : Liaison des groupes au dossier
-                            P : Droits définis sur les ressources partagées
-                            Utiliser PowerShell et fichier .csv pour la création en masse d'utilisateurs.</li>
-                        <li>Partages de fichiers et droits d'accès
-                            Créer des répertoires partagés accessibles par les clients.
-                            Appliquer les droits NTFS et les droits de partage réseau (en respectant le principe : "NTFS
-                            > partages").
-                            Associer chaque ressource à un ou plusieurs groupes d'utilisateurs.</li>
-                        <li>GPO (stratégies de groupe)
-                            Créer et appliquer des GPO (Group Policy Objects) pour :
-                            Modifier les paramètres de session utilisateur.
-                            Interdire des accès ou configurer des restrictions (ex. : interdiction d'accéder au Panneau
-                            de config).
-                            Appliquer une stratégie de mot de passe ou de pare-feu.
-                            Comprendre l'héritage des GPO et les OU (unités d'organisation).</li>
+                        <li>Maîtriser l'<strong>écosystème Microsoft</strong> en entreprise</li>
+                        <li>Implémenter une <strong>architecture client-serveur</strong> robuste</li>
+                        <li>Automatiser la <strong>gestion des postes</strong> utilisateurs</li>
+                        <li>Sécuriser l'<strong>infrastructure Windows</strong></li>
                     </ul>
 
-                    <h3>🛠️ Compétences développées</h3>
-                    <ul>
-                        <li>Gestion des utilisateurs et des groupes (en GUI et en PowerShell).</li>
-                        <li>Mise en œuvre de la méthode AGDLP pour structurer les droits d'accès.</li>
-                        <li>Gestion des accès</li>
-                        <li>Installation d'un système serveur (Windows Server 2019) sur une machine virtuelle.</li>
-                    </ul>
+                    <h3>🛠️ Compétences acquises</h3>
+                    <p>J'ai développé une expertise approfondie en administration Windows Server, maîtrisant
+                        parfaitement la gestion des rôles serveur, l'installation et la configuration des
+                        fonctionnalités avancées et la maintenance des services critiques. Mes compétences en Active
+                        Directory me permettent désormais de concevoir et gérer des architectures de domaines complexes,
+                        administrer efficacement les utilisateurs et groupes et déployer des politiques de groupe
+                        sophistiquées pour automatiser la configuration. J'ai acquis une maîtrise complète des services
+                        réseau avancés de l'écosystème Microsoft, notamment le DNS intégré Active Directory avec zones
+                        de recherche directe et inversée, et le service DHCP avec réservations d'adresses et options
+                        personnalisées. Ma compréhension de la sécurité système Windows s'est considérablement renforcée
+                        grâce à la configuration de pare-feu multicouches, l'intégration d'antivirus centralisés et la
+                        gestion automatisée des mises à jour de sécurité. J'ai également développé des compétences en
+                        automatisation avec PowerShell, sachant créer des scripts de gestion avancés et mettre en place
+                        des systèmes de déploiement automatique pour optimiser l'administration.</p>
 
-                    <h3>📊 Livrables</h3>
+                    <h3>📊 Auto-évaluation du projet</h3>
                     <ul>
-                        <li>Plan d'architecture réseau</li>
-                        <li>Documentation technique</li>
-                        <li>Tests de performance</li>
+                        <li><strong>Points forts</strong> : Infrastructure professionnelle réaliste, compétences très
+                            demandées en entreprise</li>
+                        <li><strong>Axes d'amélioration</strong> : Complexité de l'écosystème Microsoft, coût des
+                            licences</li>
+                        <li><strong>Impact</strong> : Compétences directement valorisables, compréhension des enjeux
+                            d'administration</li>
                     </ul>
                 </div>
             </div>
@@ -632,45 +872,60 @@
     <div id="modal-sae22" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal-sae22')">&times;</span>
-            <h2>SAE 2.2 - Mesurer et caractériser un signal ou un système</h2>
+            <h2>SAE 2.2 - Mesurer et caractériser un signal (RTL-SDR)</h2>
 
             <div class="modal-body">
                 <div class="project-images">
-                    <img src="images/sae22-1.jpg" alt="SAE 2.2 - Instruments mesure" class="project-image">
-                    <img src="images/sae22-2.jpg" alt="SAE 2.2 - Résultats analyse" class="project-image">
+                    <img src="images/sae22-1.jpg" alt="SAE 2.2 - Dispositif RTL-SDR" class="project-image">
+                    <img src="images/sae22-2.jpg" alt="SAE 2.2 - Interface GNU Radio" class="project-image">
                 </div>
 
                 <div class="project-info">
-                    <h3>📋 Description du projet</h3>
-                    <p>Caractérisation complète de signaux et systèmes de télécommunications avec des instruments de
-                        mesure professionnels.</p>
+                    <h3>📋 Description des Travaux et Réalisations</h3>
+                    <p>J'ai utilisé un dispositif RTL-SDR (Radio Logicielle Définie) pour effectuer une analyse
+                        spectrale complète sur la bande de fréquences 25MHz à 1750MHz, captant et traitant des signaux
+                        électromagnétiques réels présents dans l'environnement. La manipulation de logiciels SDR
+                        professionnels comme GNU Radio et SDR# m'a permis de réaliser des analyses fréquentielles
+                        détaillées avec visualisation en temps réel des spectres de fréquences. J'ai procédé à la
+                        caractérisation précise de différents types de signaux, analysant leurs paramètres de
+                        modulation, leur largeur de bande spectrale et leurs niveaux de puissance avec des mesures
+                        quantitatives rigoureuses. La documentation technique produite comprend des spectrogrammes haute
+                        résolution, des mesures de précision et des analyses comparatives de différents signaux captés.
+                        J'ai finalisé le projet par une présentation professionnelle des résultats d'analyse destinée à
+                        un client, démontrant ma capacité à communiquer des informations techniques complexes de manière
+                        accessible.</p>
 
                     <h3>🎯 Objectifs</h3>
                     <ul>
-                        <li>Se familiariser avec les instruments de mesure : Apprendre à utiliser l'oscilloscope,
-                            le générateur de fonctions, l'analyseur de spectre et d'autres outils de laboratoire.</li>
-                        <li>Mesurer différents types de signaux : Observer des signaux périodiques, impulsionnels ou
-                            modulés et en déterminer les paramètres clés (fréquence, amplitude, phase, forme d'onde).
-                        </li>
-                        <li>Analyser les performances d'un système : Vérifier si un signal respecte les normes ou les
-                            spécifications (par exemple, qualité d'un signal audio ou RF).</li>
-                        <li>Interpréter les résultats de mesure : Comparer les données mesurées avec les résultats
-                            attendus ou les modèles théoriques.</li>
+                        <li>Maîtriser les <strong>outils d'analyse spectrale</strong> modernes</li>
+                        <li>Comprendre les <strong>caractéristiques des signaux</strong> radiofréquences</li>
+                        <li>Développer l'<strong>expertise en mesure</strong> de télécommunications</li>
+                        <li>Produire des <strong>rapports techniques</strong> professionnels</li>
                     </ul>
 
-                    <h3>🛠️ Compétences développées</h3>
-                    <ul>
-                        <li>Utilisation d'oscilloscopes</li>
-                        <li>Analyse spectrale</li>
-                        <li>Mesures de distorsion</li>
-                        <li>Qualification de systèmes</li>
-                    </ul>
+                    <h3>🛠️ Compétences acquises</h3>
+                    <p>J'ai développé une expertise complète en radio logicielle (SDR), maîtrisant parfaitement les
+                        concepts théoriques de numérisation des signaux RF et l'utilisation pratique d'environnements
+                        comme GNU Radio pour le traitement en temps réel. Mes compétences en analyse spectrale me
+                        permettent désormais d'effectuer des transformées de Fourier rapides (FFT) sur des signaux
+                        complexes, d'analyser la densité spectrale de puissance et d'appliquer des techniques de
+                        filtrage numérique avancées. J'ai acquis une maîtrise technique des instruments de mesure RF,
+                        sachant calibrer précisément les équipements, évaluer les incertitudes de mesure et garantir la
+                        traçabilité métrologique des résultats. Ma compréhension du traitement du signal s'est
+                        considérablement approfondie, incluant les techniques de démodulation analogique et numérique et
+                        l'analyse détaillée des caractéristiques de modulation. J'ai également perfectionné mes
+                        compétences en communication technique spécialisée, sachant rédiger des rapports de mesure
+                        conformes aux standards industriels et présenter des résultats techniques complexes à différents
+                        types d'audiences.</p>
 
-                    <h3>📊 Livrables</h3>
+                    <h3>📊 Auto-évaluation du projet</h3>
                     <ul>
-                        <li>Protocoles de mesure</li>
-                        <li>Résultats expérimentaux</li>
-                        <li>Rapport de caractérisation</li>
+                        <li><strong>Points forts</strong> : Technologie moderne et polyvalente, applications concrètes
+                            nombreuses</li>
+                        <li><strong>Axes d'amélioration</strong> : Courbe d'apprentissage importante, nécessité de bases
+                            théoriques solides</li>
+                        <li><strong>Impact</strong> : Compétences spécialisées très valorisées, ouverture vers les
+                            télécommunications avancées</li>
                     </ul>
                 </div>
             </div>
@@ -681,59 +936,66 @@
     <div id="modal-sae23" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal-sae23')">&times;</span>
-            <h2>SAE 2.3 - Mettre en place une solution informatique pour l'entreprise</h2>
+            <h2>SAE 2.3 - Solution informatique pour l'entreprise (Météo Web)</h2>
 
             <div class="modal-body">
                 <div class="project-images">
-                    <img src="images/sae23-1.jpg" alt="SAE 2.3 - Application développée" class="project-image">
+                    <img src="images/sae23-1.jpg" alt="SAE 2.3 - Application météo" class="project-image">
                 </div>
 
                 <div class="project-info">
-                    <h3>📋 Description du projet</h3>
-                    <p>Développement et déploiement d'une solution informatique complète répondant aux besoins
-                        spécifiques d'une entreprise.</p>
+                    <h3>📋 Description des Travaux et Réalisations</h3>
+                    <p>J'ai développé une application web complète proposant des informations météorologiques
+                        personnalisées via une interface utilisateur intuitive permettant aux utilisateurs de
+                        sélectionner leur commune d'intérêt. L'intégration d'une API météorologique professionnelle m'a
+                        permis d'accéder aux données temps réel avec gestion des erreurs de communication et mise en
+                        cache pour optimiser les performances. J'ai implémenté la partie serveur avec un traitement
+                        robuste des requêtes utilisateur, validation des données d'entrée et formatage des réponses
+                        selon les besoins de l'interface. La version de base offre un affichage simple et clair des
+                        conditions météorologiques actuelles avec les informations essentielles (température, humidité,
+                        conditions générales). La version avancée enrichit l'expérience utilisateur avec des
+                        fonctionnalités supplémentaires incluant l'historique des conditions météorologiques, les
+                        prévisions à plusieurs jours et des graphiques interactifs de visualisation des tendances.
+                        L'ensemble a fait l'objet de tests fonctionnels complets garantissant la fiabilité de
+                        l'application dans différents scénarios d'usage.</p>
 
                     <h3>🎯 Objectifs</h3>
                     <ul>
-                        <li>Choisir une architecture technique adaptée :
-                            Développement d'un site web (front-end) avec HTML/CSS/JavaScript.
-                            Intégration d'une API météo (comme OpenWeatherMap ou WeatherAPI) pour récupérer les données
-                            en direct.</li>
-                        <li>Développer la solution :
-                            Coder les différentes pages ou composants du site.
-                            Établir la communication entre le front-end et l'API via des requêtes HTTP (GET/JSON).
-                            Mettre en forme les données météo récupérées et les afficher de manière claire.</li>
-                        <li>Optimiser l'expérience utilisateur :
-                            Concevoir une interface intuitive et agréable (responsive design, icônes météo claires,
-                            couleurs cohérentes).
-                            Gérer les erreurs de requêtes (ville inconnue, API indisponible…).
-                            Ajouter des fonctionnalités bonus si possible (prévisions, météo sur plusieurs jours…).</li>
-                        <li>Analyser les besoins fonctionnels :
-                            Déterminer les fonctionnalités attendues : affichage des données météo (ville, température,
-                            humidité, icônes météo…), recherche de ville, interface responsive.</li>
+                        <li>Développer une <strong>solution web complète</strong> répondant à un besoin métier</li>
+                        <li>Intégrer des <strong>services externes</strong> via APIs</li>
+                        <li>Maîtriser le <strong>développement full-stack</strong> basique</li>
+                        <li>Produire une <strong>application déployable</strong> en production</li>
                     </ul>
 
-                    <h3>🛠️ Compétences développées</h3>
-                    <ul>
-                        <li>Gestion de projet</li>
-                        <li>Développement d'applications</li>
-                        <li>Base de données</li>
-                        <li>Formation utilisateurs</li>
-                    </ul>
+                    <h3>🛠️ Compétences acquises</h3>
+                    <p>J'ai acquis une maîtrise complète du développement web full-stack, combinant efficacement les
+                        technologies front-end pour l'interface utilisateur, back-end pour le traitement des données et
+                        l'intégration d'APIs externes pour enrichir les fonctionnalités. Mes compétences en intégration
+                        de services externes me permettent désormais de consommer des APIs REST tierces avec gestion
+                        sophistiquée des erreurs de réseau, implémentation de systèmes de cache pour optimiser les
+                        performances et gestion de la limitation de taux (rate limiting). J'ai développé une expertise
+                        en conception d'interfaces utilisateur, sachant créer des interfaces ergonomiques et intuitives,
+                        implémenter un design responsive adaptatif et optimiser l'expérience utilisateur (UX) pour
+                        différents profils d'utilisateurs. Ma compréhension du déploiement d'applications web inclut la
+                        configuration de serveurs web, la gestion des bases de données pour la persistance et
+                        l'optimisation des performances pour la production. J'ai également renforcé mes compétences en
+                        tests applicatifs, sachant concevoir et exécuter des tests fonctionnels complets et gérer
+                        efficacement les cas d'erreur pour garantir la robustesse de l'application.</p>
 
-                    <h3>📊 Livrables</h3>
+                    <h3>📊 Auto-évaluation du projet</h3>
                     <ul>
-                        <li>Application fonctionnelle</li>
-                        <li>Documentation utilisateur</li>
-                        <li>Plan de déploiement</li>
+                        <li><strong>Points forts</strong> : Application concrète et utile, apprentissage complet du
+                            cycle de développement</li>
+                        <li><strong>Axes d'amélioration</strong> : Fonctionnalités basiques, pas de persistance de
+                            données avancée</li>
+                        <li><strong>Impact</strong> : Compétences de développement web applicables immédiatement</li>
                     </ul>
 
                     <div class="project-links">
-                        <a href="https://erhankilinc.github.io/Instant_WeatherV2/" target="_blank" class="project-link"
-                            id="sae23-demo">
+                        <a href="https://erhankilinc.github.io/Instant_WeatherV2/" target="_blank" class="project-link">
                             🌤️ Voir l'application météo
                         </a>
-                        <a href="https://github.com/erhankilinc" target="_blank" class="project-link" id="sae23-github">
+                        <a href="https://github.com/erhankilinc" target="_blank" class="project-link">
                             📁 Code source sur GitHub
                         </a>
                     </div>
@@ -746,44 +1008,66 @@
     <div id="modal-sae24" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal-sae24')">&times;</span>
-            <h2>SAE 2.4 - Projet intégratif</h2>
+            <h2>SAE 2.4 - Projet intégratif multithématique</h2>
 
             <div class="modal-body">
                 <div class="project-images">
-                    <img src="images/sae24-1.jpg" alt="SAE 2.4 - Projet final" class="project-image">
-                    <img src="images/sae24-2.jpg" alt="SAE 2.4 - Présentation équipe" class="project-image">
+                    <img src="images/sae24-1.jpg" alt="SAE 2.4 - Vue d'ensemble du projet" class="project-image">
+                    <img src="images/sae24-2.jpg" alt="SAE 2.4 - Présentation finale" class="project-image">
                 </div>
 
                 <div class="project-info">
-                    <h3>📋 Description du projet</h3>
-                    <p>Projet de synthèse mobilisant l'ensemble des compétences acquises dans un contexte professionnel
-                        réaliste et pluridisciplinaire.</p>
+                    <h3>📋 Description des Travaux et Réalisations</h3>
+                    <p>J'ai mené un projet multidisciplinaire complexe intégrant quatre domaines d'expertise
+                        complémentaires pour réaliser une analyse technique complète. Le volet télécommunications m'a
+                        amené à effectuer une étude spectrale approfondie de la bande ISM (Industrial, Scientific and
+                        Medical) en utilisant des analyseurs de spectre professionnels pour caractériser les signaux
+                        présents et analyser leur coexistence. La partie mathématiques a nécessité le développement de
+                        modèles théoriques complexes avec calculs avancés pour valider les observations expérimentales
+                        et prédire les comportements des systèmes étudiés. Le volet anglais technique m'a demandé de
+                        produire une documentation complète en langue anglaise, incluant la rédaction de rapports
+                        techniques spécialisés et la préparation d'une présentation orale pour un public international.
+                        Le domaine réseaux et systèmes a impliqué le déploiement complet d'une infrastructure
+                        informatique professionnelle, intégrant serveurs, équipements réseau et postes clients dans un
+                        environnement de production simulé. J'ai finalisé le projet par une synthèse multidisciplinaire
+                        démontrant les interconnexions entre tous les domaines étudiés et une présentation finale
+                        multilingue avec démonstrations techniques en direct.</p>
 
                     <h3>🎯 Objectifs</h3>
                     <ul>
-                        <li>Intégrer toutes les compétences</li>
-                        <li>Gérer un projet complexe</li>
-                        <li>Travailler en équipe</li>
-                        <li>Présenter les résultats</li>
+                        <li>Intégrer toutes les <strong>compétences acquises</strong> dans un projet complexe</li>
+                        <li>Gérer un <strong>projet multidisciplinaire</strong> avec contraintes réelles</li>
+                        <li>Développer l'<strong>expertise transversale</strong> en télécommunications</li>
+                        <li>Produire une <strong>synthèse professionnelle</strong> de haut niveau</li>
                     </ul>
 
-                    <h3>🛠️ Compétences développées</h3>
+                    <h3>🛠️ Compétences acquises</h3>
                     <ul>
-                        <li>Gestion de projet avancée</li>
-                        <li>Travail collaboratif</li>
-                        <li>Communication professionnelle</li>
-                        <li>Synthèse technique</li>
+                        <li>Gestion de projet avancée avec méthodologies agiles</li>
+                        <li>Intégration multidisciplinaire des connaissances techniques</li>
+                        <li>Communication professionnelle multilingue (français/anglais)</li>
+                        <li>Synthèse technique et présentation exécutive</li>
+                        <li>Analyse critique et résolution de problèmes complexes</li>
                     </ul>
 
-                    <h3>📊 Livrables</h3>
+                    <h3>📊 Auto-évaluation du projet</h3>
                     <ul>
-                        <li>Projet technique complet</li>
-                        <li>Présentation finale</li>
-                        <li>Documentation projet</li>
+                        <li><strong>Points forts</strong> : Projet d'envergure professionnelle, synthèse complète des
+                            apprentissages</li>
+                        <li><strong>Axes d'amélioration</strong> : Complexité de coordination, gestion du temps sur
+                            projet long</li>
+                        <li><strong>Impact</strong> : Vision globale des télécommunications, préparation à l'insertion
+                            professionnelle</li>
                     </ul>
                 </div>
             </div>
         </div>
+    </div>
+
+    <!-- Conteneur pour l'affichage plein écran des images -->
+    <div class="image-fullscreen" id="imageFullscreen">
+        <span class="close-fullscreen" onclick="closeFullscreenImage()">&times;</span>
+        <img id="fullscreenImg" src="" alt="">
     </div>
 
     <script src="script.js"></script>
