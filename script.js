@@ -249,6 +249,63 @@ style.textContent = `
         .project-info h3 {
             font-size: 1.2rem;
         }
+        
+        .project-links {
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+        
+        .project-link {
+            text-align: center;
+            justify-content: center;
+        }
     }
 `;
 document.head.appendChild(style);
+
+// Configuration des liens des projets - URLs MISES À JOUR
+document.addEventListener('DOMContentLoaded', function() {
+    const projectLinks = {
+        // SAE 1.4 - Présence Numérique
+        'sae14-link': 'https://erhankilinc.github.io/sae14_11/',
+        'sae14-github': 'https://github.com/erhankilinc',
+        
+        // SAE 1.5 - Traitement de Données
+        'sae15-github': 'https://github.com/erhankilinc/sae15-1',
+        
+        // SAE 2.3 - Application Météo
+        'sae23-demo': 'https://erhankilinc.github.io/Instant_WeatherV2/',
+        'sae23-github': 'https://github.com/erhankilinc'
+    };
+    
+    // Applique les liens configurés
+    Object.entries(projectLinks).forEach(([id, url]) => {
+        const link = document.getElementById(id);
+        if (link) {
+            // Si l'URL est encore un placeholder, désactive le lien temporairement
+            if (url.includes('votre-') || url === '#') {
+                link.href = '#';
+                link.style.opacity = '0.6';
+                link.style.cursor = 'not-allowed';
+                link.style.pointerEvents = 'none';
+                link.title = 'Lien bientôt disponible - En cours de configuration';
+                
+                // Ajoute un message temporaire
+                link.innerHTML = link.innerHTML + ' <small>(bientôt)</small>';
+            } else {
+                // Si l'URL est valide, active le lien
+                link.href = url;
+                link.style.opacity = '1';
+                link.style.cursor = 'pointer';
+                link.style.pointerEvents = 'auto';
+                link.removeAttribute('title');
+            }
+        }
+    });
+    
+    // Message d'aide dans la console pour le développeur
+    console.log('✅ Liens des projets configurés :');
+    console.log('📁 SAE 1.4 : Site web + GitHub');
+    console.log('📁 SAE 1.5 : GitHub (traitement de données)');
+    console.log('📁 SAE 2.3 : App météo + GitHub');
+});

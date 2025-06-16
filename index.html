@@ -12,9 +12,9 @@
     <!-- Header -->
     <header>
         <nav class="container">
-            <div class="logo">EK</div>
+            <div class="logo">PORTFOLIO</div>
             <ul class="nav-links">
-                <li><a href="#home">Accueil</a></li>
+                <li><a href="#about">Accueil</a></li>
                 <li><a href="#about">À propos</a></li>
                 <li><a href="#projects">Projets</a></li>
                 <li><a href="#skills">Compétences</a></li>
@@ -23,43 +23,35 @@
         </nav>
     </header>
 
-    <!-- Section Hero -->
-    <section id="home" class="hero">
+    <!-- Section Hero / À propos -->
+    <section id="about" class="hero">
         <div class="hero-content">
-            <h1>Erhan Kilinc</h1>
-            <p class="subtitle">Étudiant en Réseaux et Télécommunications</p>
-            <p class="description">
-                Passionné par les technologies réseau et la cybersécurité,
-                je développe mes compétences à travers des projets concrets et innovants.
-            </p>
-            <a href="#projects" class="cta-button">Découvrir mes projets</a>
-        </div>
-    </section>
-
-    <!-- Section À propos -->
-    <section id="about" class="section">
-        <div class="container">
-            <h2 class="section-title fade-in">À propos de moi</h2>
-            <div class="about-content fade-in">
-                <div class="about-image">
-                    <img src="IMG_1749.jpg" alt="Erhan Kilinc" class="profile-pic-img">
-                    <!-- Fallback si pas d'image -->
-                    <div class="profile-pic-fallback">EK</div>
+            <div class="about-section">
+                <div class="about-profile">
+                    <div class="about-image">
+                        <img src="IMG_1749.jpg" alt="Erhan Kilinc" class="profile-pic-img">
+                        <!-- Fallback si pas d'image -->
+                        <div class="profile-pic-fallback">EK</div>
+                    </div>
                 </div>
                 <div class="about-text">
-                    <h3>Qui suis-je ?</h3>
-                    <p>
+                    <h1>À propos de moi</h1>
+                    <p class="subtitle">Étudiant en Réseaux et Télécommunications</p>
+                    <p class="description">
                         Je m'appelle Erhan Kilinc, j'ai 18 ans et je suis actuellement étudiant
                         en Réseaux et Télécommunications. Ma formation me permet d'acquérir
                         des compétences solides dans les domaines de l'informatique, des réseaux,
                         de la cybersécurité et des télécommunications.
                     </p>
-                    <p>
+                    <p class="description">
                         Curieux et motivé, j'aime relever les défis techniques et comprendre
                         le fonctionnement des systèmes complexes. Mon objectif est de devenir
                         un expert en sécurité informatique et en architecture réseau.
                     </p>
                 </div>
+            </div>
+            <div class="cta-section">
+                <a href="#projects" class="cta-button">Découvrir mes projets</a>
             </div>
         </div>
     </section>
@@ -196,6 +188,8 @@
     <footer id="contact">
         <div class="container">
             <h2 class="section-title" style="color: white; margin-bottom: 2rem;">Contact</h2>
+            
+            <!-- Informations de contact -->
             <div class="contact-info">
                 <div class="contact-item">
                     <div class="contact-icon">📧</div>
@@ -210,6 +204,51 @@
                     <span>LinkedIn</span>
                 </div>
             </div>
+
+            <!-- Section rendez-vous -->
+            <div class="appointment-section">
+                <h3 class="appointment-title">Prendre un rendez-vous</h3>
+                <p class="appointment-subtitle">Discutons de votre projet ou de mes compétences autour d'un café virtuel</p>
+                
+                <div class="appointment-options">
+                    <a href="mailto:erhan.kilinc@example.com?subject=Demande de rendez-vous&body=Bonjour Erhan,%0D%0A%0D%0AJe souhaiterais prendre rendez-vous avec vous pour discuter de :%0D%0A- %0D%0A%0D%0AMes disponibilités :%0D%0A- %0D%0A%0D%0ACordialement," 
+                       class="appointment-btn primary">
+                        <span class="btn-icon">📅</span>
+                        <span class="btn-text">
+                            <strong>Rendez-vous par email</strong>
+                            <small>Réponse sous 24h</small>
+                        </span>
+                    </a>
+                    
+                    <a href="https://calendly.com/votre-lien" target="_blank" class="appointment-btn secondary">
+                        <span class="btn-icon">⚡</span>
+                        <span class="btn-text">
+                            <strong>Réserver directement</strong>
+                            <small>Créneau instantané</small>
+                        </span>
+                    </a>
+                    
+                    <a href="https://linkedin.com/in/votre-profil" target="_blank" class="appointment-btn tertiary">
+                        <span class="btn-icon">💬</span>
+                        <span class="btn-text">
+                            <strong>Message LinkedIn</strong>
+                            <small>Contact professionnel</small>
+                        </span>
+                    </a>
+                </div>
+
+                <div class="availability-info">
+                    <div class="availability-item">
+                        <span class="status-dot available"></span>
+                        <span>Disponible pour des entretiens</span>
+                    </div>
+                    <div class="availability-item">
+                        <span class="status-dot"></span>
+                        <span>Temps de réponse moyen : 2-4h</span>
+                    </div>
+                </div>
+            </div>
+            
             <p>&copy; 2025 Erhan Kilinc - Tous droits réservés</p>
         </div>
     </footer>
@@ -372,7 +411,6 @@
             <div class="modal-body">
                 <div class="project-images">
                     <img src="images/sae14-1.jpg" alt="SAE 1.4 - Site web portfolio" class="project-image">
-                    <img src="images/sae14-2.jpg" alt="SAE 1.4 - Profils professionnels" class="project-image">
                 </div>
 
                 <div class="project-info">
@@ -407,6 +445,16 @@
                         <li>Profils réseaux sociaux professionnels</li>
                         <li>Stratégie de communication</li>
                     </ul>
+
+                    <div class="project-links">
+                        <a href="https://erhankilinc.github.io/sae14_11/" target="_blank" class="project-link"
+                            id="sae14-link">
+                            🌐 Voir le site web du projet
+                        </a>
+                        <a href="https://github.com/erhankilinc" target="_blank" class="project-link" id="sae14-github">
+                            📁 Code source sur GitHub
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -421,7 +469,6 @@
             <div class="modal-body">
                 <div class="project-images">
                     <img src="images/sae15-1.jpg" alt="SAE 1.5 - Analyse données" class="project-image">
-                    <img src="images/sae15-2.jpg" alt="SAE 1.5 - Visualisations" class="project-image">
                 </div>
 
                 <div class="project-info">
@@ -431,15 +478,35 @@
 
                     <h3>🎯 Objectifs</h3>
                     <ul>
-                        <li>Comprendre l'origine des données : Identifier les sources (capteurs, fichiers logs, bases de
-                            données, etc.)
-                            et comprendre leur nature (valeurs numériques, temporelles, catégoriques...).</li>
-                        <li>Structurer les données : Organiser les données sous forme de tableaux, séries temporelles ou
-                            bases de données
-                            pour faciliter le traitement.</li>
-                        <li>Utiliser des outils adaptés : Savoir utiliser des langages ou logiciels comme Python</li>
-                        <li>Interpréter les résultats : Être capable de tirer des conclusions pertinentes pour résoudre
-                            un problème ou améliorer un système.</li>
+                        <li>Appliquer une logique de traitement de données
+                            Écrire des fonctions claires, testables et réutilisables (download_poke, poke_to_md,
+                            get_dataset, etc.).
+                            Gérer les fichiers d'entrée et de sortie proprement.
+                            Mettre en place une structure de projet modulaire :
+                            Un fichier par rôle (pokefiche.py, stats.py, md_to_html.py…).
+                            Possibilité d'utiliser les fonctions via ligne de commande ou import Python.
+                        </li>
+                        <li>Manipuler des données issues d'une API
+                            Comprendre le fonctionnement d'une API REST (notamment GET, format JSON, endpoint,
+                            paramètres).
+                            Faire des requêtes HTTP en Python avec requests pour récupérer des données à partir d'une
+                            source distante (la PokeAPI).
+                            Extraire les informations utiles depuis la réponse JSON : types, taille, poids,
+                            statistiques, images…</li>
+                        <li>Structurer et formater des données
+                            Organiser les données dans un format lisible (Markdown) avec une hiérarchie claire (titres,
+                            listes, sections).
+                            Générer automatiquement une fiche à partir d'un identifiant : fiche_pokemon(25) → Pikachu.
+                            Générer une page web simple (HTML) en convertissant automatiquement le Markdown.
+                            Mettre en valeur les données visuellement (ajout d'images, structure logique, mise en page).
+                        </li>
+                        <li>Analyser et représenter des statistiques
+                            Collecter un jeu de données plus large (plusieurs Pokémon).
+                            Implémenter une fonction qui calcule des statistiques pertinentes :
+                            Moyenne de PV selon la taille.
+                            Répartition des types.
+                            Comparaison d'attributs (poids vs expérience, etc.).
+                            Présenter ces statistiques dans une page synthétique en Markdown puis HTML.</li>
                     </ul>
 
                     <h3>🛠️ Compétences développées</h3>
@@ -456,6 +523,12 @@
                         <li>Tableaux de bord</li>
                         <li>Rapport d'analyse</li>
                     </ul>
+
+                    <div class="project-links">
+                        <a href="https://github.com/erhankilinc/sae15-1" target="_blank" class="project-link" id="sae15-github">
+                            📁 Code source sur GitHub
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -470,7 +543,6 @@
             <div class="modal-body">
                 <div class="project-images">
                     <img src="images/sae21-1.jpg" alt="SAE 2.1 - Plan réseau entreprise" class="project-image">
-                    <img src="images/sae21-2.jpg" alt="SAE 2.1 - Installation équipements" class="project-image">
                 </div>
 
                 <div class="project-info">
@@ -480,25 +552,44 @@
 
                     <h3>🎯 Objectifs</h3>
                     <ul>
-                        <li>Analyser les besoins de la structure : Comprendre le nombre d’utilisateurs, les types de
-                            services nécessaires
-                            (internet, imprimantes, NAS...), et les contraintes budgétaires.</li>
-                        <li>Concevoir l’architecture réseau : Choisir la topologie (en étoile, en bus…), la répartition
-                            des équipements, le type de câblage ou de réseau sans fil.</li>
-                        <li>Configurer les services de base :
-                            Attribuer des adresses IP (statiques ou via DHCP).
-                            Configurer un DNS pour la résolution de noms.
-                            Mettre en place un pare-feu de base et les règles de filtrage.</li>
-                        <li>Tester le réseau : Vérifier la connectivité, le débit, la latence, et s’assurer du bon
-                            fonctionnement du réseau.</li>
+                        <li> Installation et configuration du serveur Windows
+                            Installer Windows Server en VM (via VirtualBox ou Proxmox).
+                            Configurer l'adresse IP statique, le masque, la passerelle, et les DNS.
+                            Renommer la machine et l'intégrer à la topologie réseau prévue.</li>
+                        <li>Mise en place du contrôleur de domaine (AD DS + DNS)
+                            Promouvoir le serveur en contrôleur de domaine.
+                            Installer et configurer AD DS (Active Directory Domain Services).
+                            Installer le service DNS intégré.
+                            Comprendre les notions de forêt, domaine, relations de confiance.</li>
+                        <li>Gestion des utilisateurs et des groupes
+                            Créer des utilisateurs et groupes localement (GUI ou PowerShell).
+                            Appliquer la méthode AGDLP pour organiser les droits d'accès :
+                            A : Compte utilisateur (Account)
+                            G : Groupe global (Global group)
+                            D : Groupe de domaine local (Domain Local group)
+                            L : Liaison des groupes au dossier
+                            P : Droits définis sur les ressources partagées
+                            Utiliser PowerShell et fichier .csv pour la création en masse d'utilisateurs.</li>
+                        <li>Partages de fichiers et droits d'accès
+                            Créer des répertoires partagés accessibles par les clients.
+                            Appliquer les droits NTFS et les droits de partage réseau (en respectant le principe : "NTFS
+                            > partages").
+                            Associer chaque ressource à un ou plusieurs groupes d'utilisateurs.</li>
+                        <li>GPO (stratégies de groupe)
+                            Créer et appliquer des GPO (Group Policy Objects) pour :
+                            Modifier les paramètres de session utilisateur.
+                            Interdire des accès ou configurer des restrictions (ex. : interdiction d'accéder au Panneau
+                            de config).
+                            Appliquer une stratégie de mot de passe ou de pare-feu.
+                            Comprendre l'héritage des GPO et les OU (unités d'organisation).</li>
                     </ul>
 
                     <h3>🛠️ Compétences développées</h3>
                     <ul>
-                        <li>Administration réseau</li>
-                        <li>Configuration VLAN</li>
+                        <li>Gestion des utilisateurs et des groupes (en GUI et en PowerShell).</li>
+                        <li>Mise en œuvre de la méthode AGDLP pour structurer les droits d'accès.</li>
                         <li>Gestion des accès</li>
-                        <li>Monitoring réseau</li>
+                        <li>Installation d'un système serveur (Windows Server 2019) sur une machine virtuelle.</li>
                     </ul>
 
                     <h3>📊 Livrables</h3>
@@ -531,13 +622,13 @@
 
                     <h3>🎯 Objectifs</h3>
                     <ul>
-                        <li>Se familiariser avec les instruments de mesure : Apprendre à utiliser l’oscilloscope,
-                            le générateur de fonctions, l’analyseur de spectre et d’autres outils de laboratoire.</li>
+                        <li>Se familiariser avec les instruments de mesure : Apprendre à utiliser l'oscilloscope,
+                            le générateur de fonctions, l'analyseur de spectre et d'autres outils de laboratoire.</li>
                         <li>Mesurer différents types de signaux : Observer des signaux périodiques, impulsionnels ou
-                            modulés et en déterminer les paramètres clés (fréquence, amplitude, phase, forme d’onde).
+                            modulés et en déterminer les paramètres clés (fréquence, amplitude, phase, forme d'onde).
                         </li>
-                        <li>Analyser les performances d’un système : Vérifier si un signal respecte les normes ou les
-                            spécifications (par exemple, qualité d’un signal audio ou RF).</li>
+                        <li>Analyser les performances d'un système : Vérifier si un signal respecte les normes ou les
+                            spécifications (par exemple, qualité d'un signal audio ou RF).</li>
                         <li>Interpréter les résultats de mesure : Comparer les données mesurées avec les résultats
                             attendus ou les modèles théoriques.</li>
                     </ul>
@@ -570,7 +661,6 @@
             <div class="modal-body">
                 <div class="project-images">
                     <img src="images/sae23-1.jpg" alt="SAE 2.3 - Application développée" class="project-image">
-                    <img src="images/sae23-2.jpg" alt="SAE 2.3 - Interface utilisateur" class="project-image">
                 </div>
 
                 <div class="project-info">
@@ -581,14 +671,14 @@
                     <h3>🎯 Objectifs</h3>
                     <ul>
                         <li>Choisir une architecture technique adaptée :
-                            Développement d’un site web (front-end) avec HTML/CSS/JavaScript.
-                            Intégration d’une API météo (comme OpenWeatherMap ou WeatherAPI) pour récupérer les données
+                            Développement d'un site web (front-end) avec HTML/CSS/JavaScript.
+                            Intégration d'une API météo (comme OpenWeatherMap ou WeatherAPI) pour récupérer les données
                             en direct.</li>
                         <li>Développer la solution :
                             Coder les différentes pages ou composants du site.
-                            Établir la communication entre le front-end et l’API via des requêtes HTTP (GET/JSON).
+                            Établir la communication entre le front-end et l'API via des requêtes HTTP (GET/JSON).
                             Mettre en forme les données météo récupérées et les afficher de manière claire.</li>
-                        <li>Optimiser l’expérience utilisateur :
+                        <li>Optimiser l'expérience utilisateur :
                             Concevoir une interface intuitive et agréable (responsive design, icônes météo claires,
                             couleurs cohérentes).
                             Gérer les erreurs de requêtes (ville inconnue, API indisponible…).
@@ -612,6 +702,16 @@
                         <li>Documentation utilisateur</li>
                         <li>Plan de déploiement</li>
                     </ul>
+
+                    <div class="project-links">
+                        <a href="https://erhankilinc.github.io/Instant_WeatherV2/" target="_blank" class="project-link"
+                            id="sae23-demo">
+                            🌤️ Voir l'application météo
+                        </a>
+                        <a href="https://github.com/erhankilinc" target="_blank" class="project-link" id="sae23-github">
+                            📁 Code source sur GitHub
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
